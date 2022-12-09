@@ -85,7 +85,7 @@ Haziran 2020
 
 Mayıs 2020
 ==================================================
-* `Extended bolus only for Dana + Insight pumps <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_
+* `Yalnızca Dana + Insight pompaları için yayma bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pompa-only>`_
 * `Insight titreşimi devre dışı bırak <../Configuration/Accu-Chek-Insight-Pump.html#vibration>`_ (pompa yazılımı 3.x için)
 * Açık döngü modunda bildirim sayısını azaltmak için `Minimum istek oranı <../Configuration/Preferences.html#minimal-request-change>`_
 * `Yamalı Libre Link uygulaması <../Hardware/Libre2.html#step-1-build-your-own-patched-librelink-app>`_ - doğru yama yapılıp yapılmadığının kontrolü
@@ -148,8 +148,8 @@ Ekim 2019
 ==================================================
 * `AAPS sürüm 2.5 <../Installing-AndroidAPS/Releasenotes.html#version-2-5-0>`_ güncellemeleri (özellikle `güncelleme sayfasında <../Installing-AndroidAPS/Update-to-new-version. html>`_)
 * `AccuChek Insight - günlük seçenekleri <../Configuration/Accu-Chek-Insight-Pump.html#settings-in-aaps>`_
-* `COB hesaplaması ayrı sayfada <../Usage/COB-calculation.html>`_
-* `COB - yanlış COB değeri tespiti <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
+* `AKRB hesaplaması ayrı sayfada <../Usage/COB-calculation.html>`_
+* `AKRB - yanlış AKRB değeri tespiti <../Usage/COB-calculation.html#detection-of-wrong-cob-values>`_
 * `Dexcom G6'ya özel sorun giderme <../Hardware/DexcomG6.html#dexcom-g6-special-troubleshooting>`_
 * `Görevler sürüm 2.5 güncellemesi <../Usage/Objectives.html>`_
 * `Tercihler güncellemesi <../Configuration/Preferences.html>`_

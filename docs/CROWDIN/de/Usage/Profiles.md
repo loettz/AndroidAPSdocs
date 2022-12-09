@@ -1,16 +1,19 @@
 # Profilwechsel
 
-Wenn du dein AndroidAPS startest und dein Profil auswählst, wirst du einen "Profilwechsel" mit einer Dauer von 0 durchführen müssen (wird später erklärt). Wenn du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort auf AAPS übertragen, aber du musst zu dem gleichen Profil wechseln (in NS oder AAPS), damit diese Änderungen aktiv werden.
+Dokumentation zu Profilen im Allgemeinen finden sich unter [Konfiguration - Profil](../Configuration/Config-Builder#profile).
 
-AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum. Eine Dauer von 0 bedeutet unendlich. Dadurch ist dieses Profil bis zu einem erneuten Profilwechsel aktiv.
+Wenn du dein AndroidAPS startest und dein Profil auswählst, musst du einen "Profilwechsel" mit einer Dauer von 0 durchführen (wird später erklärt). Wenn du das machst, beginnt AAPS damit, die Historie der Profile zu verfolgen und jede Änderung am Profil erfordert einen erneuten Profilwechsel, auch dann, wenn du den Inhalt eines Profils in NS änderst. Ein geändertes Profil wird sofort an AAPS übertragen, aber du musst dieses Profil aktivieren, damit die Änderungen aktiv werden.
+
+AAPS erzeugt intern eine Momentaufnahme des Profils mit dem Startdatum und der Dauer und verwendet es für den angegebenen Zeitraum.
+
+* Eine Dauer von 0 bedeutet unendlich. Dadurch ist dieses Profil bis zu einem erneuten Profilwechsel aktiv.
+* Dauer von x Minuten bedeutet x Minuten Verwendung dieses Profils. Nach Ablauf dieser Dauer wird das Profil wieder auf das zuvor aktive Profil zurückgestellt.
+
+Wenn Du Dein Profil in der Registerkarte "lokales Profil" bearbeitet hast, kannst Du das Profil dort aktivieren, was gleichzeitig einen Profilwechsel bewirkt.
 
 Drücke lange auf den Namen Deines Profils ("Tuned 03/11" im Bild unten), um einen Profilwechsel durchzuführen.
 
 ![Profilwechsel durchführen](../images/ProfileSwitch_HowTo.png)
-
-Wenn du einen Profilwechsel mit einer bestimmten Dauer verwendest, dann wird das Profil nach Zeitablauf auf den letzten gültigen Profilwechsel zurückgesetzt
-
-Wenn du lokale AAPS Profile verwendest (Einfach, Lokal, CPP), musst du den Button dort drücken, um diese Änderungen zu aktivieren (das erzeugt ein korrektes Profilwechsel-Ereignis).
 
 Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die früher Teil des Zirkadianen Prozent-Profils waren:
 
@@ -19,7 +22,7 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 * Wendet den gleichen Prozentsatz auf alle Parameter des Profils an. 
 * Wenn du ihn auf 130% setzt (was bedeutet, dass du eine 30% höhere Insulinresistenz hast), wird es die Basalrate um 30% erhöhen. Es senkt auch ISF und IC entsprechend (in diesem Beispiel werden sie durch 1,3 geteilt).
   
-  ![Beispiel Profilwechsel mit Prozentsatz](../images/ProfileSwitchPercentageD.png)
+  ![Beispiel Profilwechsel mit Prozentsatz](../images/ProfileSwitchPercentage.png)
 
 * Das wird an die Pumpe gesendet und ist dann die standardmäßig verwendete Basalrate.
 
@@ -29,7 +32,7 @@ Bei einem Profilwechsel kannst Du zwei zusätzliche Optionen wählen, die frühe
 
 ![Prozentsatz der Profilumschaltung und Zeitschaltupft](../images/ProfileSwitchTimeShift2.png)
 
-* Verschiebt alles um die Anzahl an den eingegebenen Stunden. 
+* Verschiebt alles um die Anzahl der eingegebenen Stunden. 
 * So kannst du zum Beispiel bei Nachtschichten angeben, wie viele Stunden später / früher du zu Bett gehst oder aufstehst.
 * Es geht immer um die Frage, die Profileinstellungen welcher Uhrzeit die aktuellen ersetzen sollen. Diese Uhrzeit muss um x Stunden verschoben werden. Achte daher auf die Richtung der Zeitverschiebung wie im folgenden Beispiel beschrieben: 
   * Aktuelle Zeit: 12:00
@@ -50,7 +53,7 @@ Der Mechanismus, dass eine Momentaufnahme des Profils gemacht wird, erlaubt eine
 
 ![Basalprofil nicht auf Stunden ausgerichtet](../images/BasalNotAlignedToHours2.png)
 
-* Diese Fehlermeldungen werden angezeigt, wenn Du eine Basalrate oder I:C Faktoren nicht nur zur vollen Stunde hast. (Die Pumpen DanaR und DanaRS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
+* Diese Fehlermeldungen werden angezeigt, wenn Du eine Basalrate oder I:C Faktoren nicht nur zur vollen Stunde hast. (Die Pumpen Dana R und Dana RS beispielsweise lassen Änderungen zur halben Stunde nicht zu.)
   
   ![Beispiel Basalprofil nicht auf Stunden ausgerichtet](../images/ProfileNotAlignedToHours.png)
 

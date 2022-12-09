@@ -40,6 +40,7 @@ CGM
 ==================================================
 * `General <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
+* `Libre 3 <../Hardware/Libre3.html#experiences-and-troubleshooting>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip - no CGM data <../Configuration/xdrip.html#identify-receiver>`_
 * `xDrip - Dexcom troubleshooting <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
@@ -59,4 +60,5 @@ Telefones
 
 Smartwatches
 ==================================================
+* `Troubleshooting Wear app <../Configuration/Watchfaces.html#troubleshooting-the-wear-app>`_
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

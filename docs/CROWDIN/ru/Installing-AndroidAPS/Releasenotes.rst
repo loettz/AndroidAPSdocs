@@ -16,7 +16,7 @@ ContextEdit.
 
 Версия Android и версия AAPS
 ====================================
-Если ваш смартфон использует версию Android до Android 9, вы не сможете использовать AAPS 3.. 0 и выше, так как она требует не ниже Android 9.
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
 
 Чтобы пользователи более старой версии Android могли применять старые версии AAPS для них была изменена только проверка версий. Никаких других улучшений не включено.
 
@@ -33,13 +33,40 @@ Android 8
 Android 7
 ------------------------------------
 * Пользуйтесь AAPS версии **2.6.2**
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.6.2
+
+Version 3.1.0
+================
+Release date: 19-07-2022
+
+Важные Примечания
+----------------------
+* after update uninstall Wear app and install new version
+* Omnipod users: update on pod change !!!
+
+Изменения
+----------------------
+* fixed issues from 3.0 version
+* fix application freezing @MilosKozak
+* fixed DASH driver @avereha
+* fixed Dana drivers @MilosKozak
+* huge UI improvement, cleanup and unification, migration to material design, styles, white theme, new icons. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
+* Wear code refactored. Not backward compatible anymore @MilosKozak
+* a11y improvements @Andries-Smit
+* new protection option PIN @Andries-Smit
+* allow graph scale from menu @MilosKozak
+* more statistics available @MilosKozak
+* MDI plugin removed in favor of VirtualPump
+* new automation action: StopProcessing (following rules)
 
 Version 3.0.0
 ================
 Release date: 31-01-2022
 
-Важные Примечания
+Важные подсказки
 ----------------------
 * **Минимальная версия Android теперь 9.0**
 * **Данные не переносятся в новую базу данных.** Не жалуйтесь, это практически невозможно. Таким образом после обновления данные IOB, COB, терапии и т. д. будут очищены. You have to create new `profile switch <../Usage/Profiles.html>`_ and start with zero IOB and COB. Планируйте обновление тщательно!!! Лучшая ситуация - без активного инсулина и углеводов
@@ -59,7 +86,7 @@ Release date: 31-01-2022
 Изменения
 ----------------------
 * 100k lines changed, 105k new lines of code
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Поддержка Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Поддержка Glunovo
@@ -115,7 +142,7 @@ Release date: 31-01-2022
 ================
 Дата выпуска: 12-01-2021
 
-Важные подсказки
+Важные Примечания
 ----------------------
 * Параметр **NS_UPLOAD_ONLY** (только загрузка в NS) был принудительно включен для всех пользователей 2.8.1.
 * Если вы используете NSClient для ввода временных целей TT, углеводов или профилей вы должны отключить его в AAPS, но **только в том случае, если ваша синхронизация хорошо работает** (т. е. вы не видите нежелательных вариаций в данных, таких как произвольное самоизменение TT, TBR и т. д.).
@@ -171,7 +198,7 @@ Release date: 31-01-2022
 
 **Не забудьте проверить и исправить настройки после обновления до 2.7, описание см. ** `здесь <../Installing-AndroidAPS/update2_7.html>`__.
 
-Чтобы заработала автоматизация необходимо начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_ <. /Usage/Automation.html>`_ (все предыдущие цели должны быть пройдены, иначе начать цель11 невозможно). Если например, вы не прошли экзамен в `цели 3 <../Usage/Objectives. tml#objective-3-prove-your-knowledge>`_ у вас не получится начать `цель 11 <../Usage/Objectives.html#objective-11-automation>`_. Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. Это не повлияет на другие цели, которые вы уже выполнили. У вас сохранятся все завершенные цели!
 
 Новые возможности
 ----------------------
@@ -194,7 +221,7 @@ Release date: 31-01-2022
 * небольшие исправления для помпы Insight @TebbeUbben @MilosKozak
 * `"Язык по умолчанию" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * векторные иконки @Philoul
-* `установить нейтральные временные для MDT <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * Улучшения в браузере истории @MilosKozak
 * удалён алгоритм OpenAPS MA @Tornado-Tim
 * Удалена чувствительность Oref0 @Tornado-Tim
@@ -276,7 +303,7 @@ Release date: 31-01-2022
 ------------------
 * Небольшие изменения дизайна (стартовая страница...)
 * Удалена закладка / меню Careportal - подробнее `здесь <../Usage/CPbefore26.html>`__
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
+* Новый плагин `Локальный профиль <../Configuration/Config-Builder.html#local-profile-recommended>`_
 
   * Локальный профиль может иметь более 1 профиля
   * Профили можно копировать и редактировать
@@ -284,7 +311,7 @@ Release date: 31-01-2022
   * Старые переключатели профиля можно клонировать на новый в LocalProfile (применяется сдвиг по времени и процент)
   * Vertical NumberPicker для целей
 * SimpleProfile удален
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
+* `Пролонгированный болюс <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - замкнутый цикл будет деактивирован
 * Плагин MDT: Исправлена ошибка с дублирующимися записями
 * Единицы не указаны в профиле, но это глобальные параметры
 * Добавлены новые параметры для мастера установки

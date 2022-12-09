@@ -1,213 +1,277 @@
-# AAPS on Wear OS smartwatch
+# AAPS בשעונים חכמים עם מערכת הפעלה Wear Os
 
-You can install AndroidAPS app on your **Wear OS based** smartwatch. Watch version of AAPS allows you to:
+אתם יכולים להתקין AndroidAPS בשעון החכם שלכם המבוסס **Wear Os**. גרסת השעון של AAPS מאפשר לכם:
 
-* **display data on your watch**: by providing [custom watchfaces](#aaps-watchfaces) or in standard watchfaces with use of [complications](#complications)
-* **control AAPS on phone**: to bolus, set a temporary target etc.
+* **להציג מידע בשעונכם**: באמצעות מבחר של [תצוגות מותאמות אישית](#aaps-watchfaces) או תצוגות סטנדרטיות בשימוש של [סיבוכים](#complications).
+* **לשלוט על AAPS מהשעון**: להזריק בולוס, לקבוע ערך מטרה זמני וכו'.
 
-### Before you buy watch...
+### לפני קניית שעון...
 
-* Some features like *complications* require Wear OS version 2.0 or newer to work
-* Google rebranded *Android Wear 1.x* to *Wear OS* from version 2.x, so when it says *Android Wear* it may indicate older 1.x version of system
-* If description of smartwatch indicates only compatibility with *Android* and *iOS* - it **does not** means it runs on *Wear OS* - it may as well be some other sort of Vendor specific OS **which is not compatible with AAPS wear!**
-* Check [list of tested phones and watches](../Getting-Started/Phones#list-of-tested-phones) and [ask community](../Where-To-Go-For-Help/Connect-with-other-users.md) if in doubt if your watch will be supported
+* כמה תכונות כגון *סיבוכים* מחייבות גרסה 2.0 של Wear Os או מאוחרת יותר כדי לעבוד
+* חברת גוגל שינתה שמה של *Android Wear 1.x* לשם *Wear OS* מגרסה 2.x, כך כאשר היא אומרת *Android Wear* יתכן שמתכוונת לגרסה הישנה 1.x של המערכת.
+* אם התיאור של השעון החכם מצביעה על תאימות רק עם *Android* וגם *IOS* - זה **לא** אומר שהוא עובד עם *Wear Os* - יתכן שהיצרנים משתמשים במערכות משלהם **שלא תואמות AAPS wear!**
+* עיינו [ברשימה של הטלפונים והשעונים שנבחנו](../Getting-Started/Phones#list-of-tested-phones) וגם [שאלו את הקהילה](../Where-To-Go-For-Help/Connect-with-other-users.md) אם יש לכם ספק שהשעון שלכם נתמך.
 
-### Building Wear OS version of AAPS
+### בניית גרסת Wear OS של AAPS
 
-The Wear OS App of AAPS has been seperated from the AAPS build for the Android mobile. Therefore you have to generate a second signed APK. Select as module "AndroidAPS.wear" and as build variant "fullRelease" and a second apk file for the Wear OS clock is generated when [building the APK](../Installing-AndroidAPS/Building-APK.md) (or "pumpcontrolRelease" which will allow you to just remote control the pump without looping).
+אפליקציית Wear OS של AAPS הופרדה מבניית אפליקציית ה-Android של הטלפון הנייד. לכן עליכם ליצור APK חתום נפרד נוסף. בחרו את המודול "AndroidAPS.wear" ואת הגרסה לבנייה "fullRelease" כדי שאפליקציה שנייה עבור השעון Wear OS תיבנה במסגרת [בניית קובץ ה-APK](../Installing-AndroidAPS/Building-APK.md) (או "pumpcomtrolRelease" אשר תאפשר שליטה מהשעון במשאבה ללא לופ).
 
-From March 2021 you need to sideload AAPS onto the watch, it is no longer accessible via the watch's Google Play Store. You can sideload using [Wear Installer](https://youtu.be/8HsfWPTFGQI) which you will need to install on both your watch and phone. The Wear Installer app can be downloaded from the Google Play Store. The linked video from Malcolm Bryant the developer of Wear Installer gives you detailed instructions to a) download the apk to your mobile b) setup the Android Debugger on the wear c) use Wear Installer on mobile and wear to sideload the AAPS wear app to the mobile. Once you have selected AndroidAPS as your app to upload wear version onto the watch you will be able to use watchfaces and complications and the AAPS controls.
+החל ממאי 2021 חובה להתקין את AAPS בשעון "מהצד", כי היא לא נגישה יותר דרך חנות האפליקציות של גוגל שבשעון. ניתן להתקין מן הצד בעזרת [Wear Installer](https://youtu.be/8HsfWPTFGQI) אותם צריך להתקין גם בשעון וגם בטלפון. האפליקצה Wear Installer ניתנת להורדה מחנות האפליקציות של גוגל. הסרטון המקושר מעלה של מפתח Wear Installer מלקולם בריינט, נותן הוראות מפורטות ל- א. להורדת האפליקציה לטלפון הנייד. ב. הגדרת ה-Android Debugger בשעון. ג. השימוש ב-Wear Installer בטלפון ובשעון כדי להתקין מהצד את אפליקציית AAPS wear בשעון. לאחר שתבחרו את AndroidAPS כאפליקציה להעלאת הגרסה של Wear בשעון, תוכל להשתמש במסכי תצוגה, סיבוכים ופונקציות לשליטה ב-AAPS.
 
-### Setup on the Phone
+### הגדרות בטלפון
 
-Within AndroidAPS, in the ConfigBuilder you need to [enable Wear plugin](../Configuration/Config-Builder#wear).
+בתוך AndroidAPS, בבונה התצורה עליכם [לאפשר תוסף Wear](../Configuration/Config-Builder#wear).
 
-## Controlling AAPS from Watch
+## שליטה ב-AAPS מהשעון
 
-AndroidAPS is designed to be *controlled* by Android Wear watches. If you want to bolus etc. from the watch then within "Wear settings" you need to enable "Controls from Watch".
+AndroidAPS מותאם להיות *נשלט* על ידי שעוני Android Wear. אם אתם רוצים להזריק בולוס וכו' מהשעון, עליכם להפעיל את "שליטה משעון" בתוך "הגדרות Wear" בבונה התצורה.
 
-The following functions can be triggered from the watch:
+הפונקציות הבאות ניתנות להפעלה מהשעון:
 
-* set a temporary target
-* use the bolus calculator (calculation variables can be defined in [settings](../Configuration/Config-Builder#wear) on the phone)
-* administer eCarbs
-* administer a bolus (insulin + carbs)
-* watch settings
-* status 
-    * check pump status
-    * check loop status
-    * check and change profile, CPP (Circadian Percentage Profile = time shift + percentage)
-    * show TDD (Total daily dose = bolus + basal per day)
+* קביעת ערך מטרה זמני
+* שימוש במחשבון הבולוסים (משתני החישוב יכולים להיות מוגדרים ב[הגדרות](../Configuration/Config-Builder#wear) בטלפון)
+* הכרזת פחמימות ממושכות
+* הזרקת בולוס (אינסולין + פחמימות)
+* הגדרות שעון
+* סטטוס 
+    * בדיקת סטטוס המשאבה
+    * בדיקת סטטוס הלופ
+    * בדיקה והחלפת פרופיל, CPP (פרופיל אחוזים צירקדיים = היסט זמן + אחוז)
+    * הצגת תצרוכת האינסולין הכללית (TDD=סיכום יומי של הבולוסים יחד עם המינונים הבזאליים)
 
-## AAPS Watchfaces
+## תצוגות שעונים של AAPS
 
-There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
 
-Ensure notifications from AndroidAPS are not blocked on the watch. Confirmation of action (e.g. bolus, tempt target) comes via notification which you will need to swipe and tick.
+וודאו שהתראות מ-AndroidAPS לא חסומות בשעון. אישור של פעולה (כגון זריקת בולוס, יעד זמני וכו') תבוצע דרך התראות שתצטרכו להחליק ולאשר.
 
-To get faster to the AAPS menu, do a double tap on your BG. With a double tap onto the BG curve you can change the time scale..
+כדי להציג את התפריט של AAPS במהירות, הקישו פעמיים על קריאת גלוקוז הדם במסך. עם הקשה כפולה בעקומת הגלוקוז בדם, אתם יכולים לשנות את קנה מידת הזמן בתצוגה..
 
-## Watchfaces available
+## תצוגות שעון זמינות
 
 ![Available watchfaces](../images/Watchface_Types.png)
 
-### New watchface as of AndroidAPS 2.8
+### תצוגות שעון חדשות החל מגרסה AndroidAPS 2.8
 
 ![Watchface Digital Style](../images/Watchface_DigitalStyle.png)
 
-* Color, lines and circle are configurable in setting menu on cog-sign of watchface chooser menu.
+* את הצבעים, השורות והעיגולים ניתן להגדיר בתפריט ההגדרות בגלגל השיניים של תפריט בחירת תצוגות השעות.
 
-## AAPSv2 watchface - Legend
+## תצוגת שעות AAPSv2 - מקרא
 
 ![Legend AndroidAPSv2 watchface](../images/Watchface_Legend.png)
 
-A - time since last loop run
+A - זמן שעבר מאז הפעילות האחרונה של הלופ
 
-B - CGM reading
+B - קריאת חיישון גלוקוז רציף
 
-C - minutes since last CGM reading
+C - דקות שעברו מאז קריאת חיישן הסוכר האחרונה
 
-D - change compared to last CGM reading (in mmol or mg/dl)
+D - שינוי בהשוואה לקריאה האחרונה מהחיישן (ב-mmol או mg/dl)
 
-E - average change CGM reading last 15 minutes
+E - שינוי ממוצע בקריאות החיישן ב-15 הדקות האחרונות
 
-F - phone battery
+F - סוללת הטלפון
 
-G - basal rate (shown in U/h during standard rate and in % during TBR)
+G - המינון הבזאלי (מוצג ביחידות לשעה ובאחוזים כאשר מופעל מינון בזאלי זמני)
 
-H - BGI (blood glucose interaction) -> the degree to which BG “should” be rising or falling based on insulin activity alone.
+H - (אינטראקציה של גלוקוז בדם - BGI) -> המידה בה הסוכר בדם צפוי לעלות או לרדת על בסיס פעולת האינסולין בלבד.
 
-I - carbs (carbs on board | e-carbs in the future)
+I - פחמימות (פחמימות זמינות או ממושכות עתידיות)
 
-J - insulin on board (from bolus | from basal)
+J - אינסולין פעיל (בולוס או בזאלי)
 
-## Accessing main menu of AAPS
+## גישה לתפריט הראשי של AAPS
 
-To access main menu of AAPS you can use on of following options:
+על מנת לגשת לתפריט הראשי של AAPS אתם יכולים להשתמש בחלופות הבאות:
 
-* double tap on your BG value
-* select AAPS icon in watch applications menu
-* tap on AAPS complication (if configured for menu)
+* הקשה כפולה בערך הגלוקוז בדם
+* לבחור בצלמית AAPS בתפריט האפליקציות בשעון
+* הקשה על "סיבוך" (אם מוגדר בתפריט)
 
-## Settings (in wear watch)
+## הגדרות (בשעון wear)
 
-To access to the watchface settings, enter AAPS main menu, slide up and select "Settings".
+על מנת לגשת להגדרות של תצוגת השעון, כנסו לתפריט הראשי של AAPS, החליקו למעלה ובחרו "הגדרות".
 
-Filled star is for enabled state (**On**), and hollow star icon indicates that setting is disabled (**Off**):
+כוכבית מלאה מורה על מצב מאושר (**On**), וכוכבית ריקה מורה על לא מאושר (**Off**):
 
 ![Settings on/off](../images/Watchface_Settings_On_Off.png)
 
-### AAPS companion parameters
+### פרמטרים נלווים של AAPS
 
-* **Vibrate on Bolus** (default `On`):
-* **Units for Actions** (default `mg/dl`): if **On** units for actions is `mg/dl`, if **Off** unit is `mmol/l`. Used when setting a TT from watch.
+* ** רטט בזמן בולוס** (ברירת מחדל `On`):
+* **יחידות לפעולות** (ברירת מחדל `mg/dl`): אם **On** יחידות לפעולות `mg/dl`, אם **Off** היחידה היא `mmol/l`. בשימוש כאשר מוגדר יעד זמני (TT) מהשעון.
 
-### Watchface settings
+### הגדרות תצוגת פני השעון
 
-* **Show Date** (default `Off`): note, date is not available on all watchfaces
-* **Show IOB** (default `On`): Display or not IOB value (setting for detailed value is in AAPS wear parameters)
-* **Show COB** (default `On`): Display or not COB value
-* **Show Delta** (default `On`): Display or not the BG variation of the last 5 minutes
-* **Show AvgDelta** (default `On`): Display or not the average BG variation of the last 15 minutes
-* **Show Phone Battery** (default `On`): Phone battery in %. Red if below 30% .
-* **Show Rig Battery** (default `Off`): Rig battery is a synthesis of Phone battery, pump battery and sensor battery (generally the lowest of the 3 values)
-* **Show Basal Rate** (default `On`): Display or not current basal rate (in U/h or in % if TBR)
-* **Show Loop Status** (default `On`): show how many minutes since last loop run (arrows around value turn red if above 15').
-* **Show BG** (default `On`): Display or not last BG value
-* **Show Direction Arrow** (default `On`): Display or not BG trend arrow
-* **Show Ago** (default `On`): show how many minutes since last reading.
-* **Dark** (default `On`): You can switch from black background to white background (except for Cockpit and Steampunk watch face)
-* **Highlight Basals** (default `Off`): Improve the visibility of basal rate and temp basals
-* **Matching divider** (default `Off`): For AAPS, AAPSv2 and AAPS(Large) watchfaces, show contrast background for divider (**Off**) or match divider with the background color (**On**)
-* **Chart Timeframe** (default `3 hours`): you can select in the sub menu the max time frame of your chart between 1 hour and 5 hours.
+* **הצג תאריך** (ברירת מחדל `Off`): הערה, התאריך לא זמין בכל סוגי פני השעון
+* **הצג אינסולין פעיל** (ברירת מחדל `On`): מציג או לא מציג את ערך האינסולין הפעיל (הגדרות לערכים מפורטים נמצאות בפרמטרים של AAPS Wear)
+* **הצג פחמימות פעילות** (ברירת מחדל `On`): מציג או לא ערך פחמימות פעילות
+* **הצג דלתא** (ברירת מחדל `On`): מציג או לא את השינוי של הגלוקוז בדם ב-5 הדקות האחרונות
+* **הצג דלתא ממוצעת** (ברירת מחדל `On`): מציג או לא את השינוי הממוצע של גלוקוז בדם ב-15 הדקות האחרונות
+* **הצג סוללת הטלפון** (ברירת מחדל `On`): מצב סוללת הטלפון באחוזים. צבע אדום כשמתחת ל-30%.
+* **הצג מצב סוללה משולבת** (ברירת מחדל `Off`): סוללה משולבת היא שילוב ערך מצב סוללה הטלפון, המשאבה והחיישן (בדרך כלל הערך הנמוך משלושת הערכים)
+* **הצג מינון בזאלי** (ברירת מחדל `On`): מציג או לא את המינון בזאלי הנוכחי (ביחידות לשעה או באחוזים אם מופעל מינון בזאלי זמני)
+* **הצג סטטוס לולאה** (ברירת מחדל`On`): מציג כמה דקות עברו מאז הפעלת הלופ האחרונה (חצים אדומים אם עברו מעל ל-15 דקות).
+* **הצג רמת סוכר** (ברירת מחדל `On`): מציג או לא את ערך הגלוקוז האחרון
+* **הצג חץ כיוון** (ברירת מחדל `On`): מציג או לא את חץ מגמת ערך הגלוקוז בדם
+* **הצג עבר** (ברירת מחדל `On`): מציג כמה זמן עבר מאז הקריאה האחרונה של גלוקוז בדם.
+* **כהה** (ברירת מחדל `On`): באפשרותכם להחליף מרקע שחור לרקע לבן (למעט תצוגת פנים של Cockpit ו-Steampunk)
+* **הדגש בזאלים** (ברירת מחדל `Off`): משפר את הנראות של המינון הבזאלי והבזאלי הזמני
+* **מחיצות מותאמות** (ברירת מחדל `Off`): עבור תצוגות AAPS, AAPSv2 ו- AAPS (גדול), מציג רקע מנוגד לחוצץ (**Off**) או מתאים את צבע הרקע לחוצץ (**On**)
+* **מסגרת זמן התרשים** (ברירת מחדל `3 שעות`): הינכם יכולים לבחור בתפריט המשני את מסגרת הזמן המרבית של התרשים, בין שעה אחת לחמש שעות.
 
-### User Interface setting
+### הגדרות ממשק המשתמש
 
-* **Input Design**: with this parameter, you can select the position of "+" and "-" buttons when you enter commands for AAPS (TT, Insulin, Carbs...)
+* **עיצוב קלט**: עם פרמטר זה, הנכם יכולים לבחור את מיקום מקשי "+" ו-"-" כאשר אתם מכניסים פקודות ל-AAPS (אינסולין, פחמימות, ע' מטרה זמני...)
 
 ![Input design options](../images/Watchface_InputDesign.png)
 
-### Specific watchface parameters
+### פרמטרים ספציפיים של פני השעון
 
-#### Steampunk watchface
+#### פני שעון Steampunk
 
-* **Delta Granularity** (default `Medium`)
+* **מפורט** (ברירת המחדל `בינוני`)
 
 ![Steampunk_gauge](../images/Watchface_Steampunk_Gauge.png)
 
-#### Circle WF
+#### תצוגת פנים עיגול
 
-* **Big Numbers** (default `Off`): Increase text size to improve visibility
-* **Ring History** (default `Off`): View graphically BG history with gray rings inside the hour's green ring
-* **Light Ring History** (default `On`): Ring history more discreet with a darker gray
-* **Animations** (default `On`): When enabled, on supported by watch and not in power saving low-res mode, watchface circle will be animated
+* **מספרים גדולים** (ברירת מחדל `Off`): הגדלת גודל האותיות לשיפור הנראות
+* **היסטוריית הטבעת** (ברירת מחדל `Off`): ראו בגרף את היסטוריית הגלוקוז בדם עם טבעות אפורות בתוך הטבעת הירוקה של השעות
+* **טבעת היסטוריה כהה** (ברירת מחדל `On`): טבעת היסטוריה פחות בולטת בצבע באפור כהה
+* **הנפשה** (ברירת מחדל `On`): כאשר מופעלת, העיגול על פני השעון מונפש בתנאי שהאפשרות נתמכת על ידי השעון ושאינו עם רזולוציה נמוכה עקב מצב חיסכון באנרגיה
 
-### Commands settings
+### הגדרות פקודות
 
-* **Wizard in Menu** (default `On`): Allow wizard interface in main menu to input Carbs and set Bolus from watch
-* **Prime in Menu** (default `Off`): Allow Prime / Fill action from watch
-* **Single Target** (default `On`):
+* **אשף בתפריט** (ברירת מחדל `On`): מאפשר ממשק אשף בתפריט הראשי לרישום פחמימות ולהגדרת בולוס מהשעון
+* **תיחול בתפריט** (ברירת מחדל `Off`): מאפשר תיחול \ מילוי מהשעון
+* **ערך מטרה יחיד** (ברירת מחדל `On`):
     
-    * `On`: you set a single value for TT
-    * `Off`: you set Low target and high target for TT
+    * `On`: הנכם מגדירים ערך יחיד של מטרה זמנית
+    * `Off`: הנכם מגדירים ערך מטרה נמוך וגבוה עבור מטרה זמנית
 
-* **Wizard Percentage** (default `Off`): Allow bolus correction from wizard (value entered in percentage before confirmation notification)
+* **אחוז האשף** (ברירת המחדל `off`): מאפשר בולוס תיקון מהאשף (הערך הוזן באחוזים לפני הודעת האישור)
 
-## Complications
+## סיבוכים
 
-*Complication* is a term from traditional watchmaking, where it describes addition to the main watchface - as another small window or sub-dial (with date, day of the week, moon phase, etc.). Wear OS 2.0 brings that metaphor to allow custom data providers, like weather, notifications, fitness counters and more - to be added to any watchfaces that support complications.
+*סיבוכים* הינו מונח מסורתי של שענות, אשר מתאר תוספים לפנים של השעון - כחלון קטן נוסף או מחוג משני (עם תאריך, יום בשבוע, שלב ירח, וכו'). Wear OS 2.0 מביא מטפורה זו על מנת לאפשר לתוכנות המספקות מידע, כמו הודעות מזג אוויר, מחשבוני כושר ועוד - להיות מוסף לכל פני השעונים שתומכים בסיבוכים.
 
-AndroidAPS Wear OS app supports complications since build `2.6`, and allow any third party watchface that supports complications to be configured to display AAPS related data (BG with the trend, IOB, COB, etc.).
+אפליקציית AndroidAPS Wear OS תומכת בסיבוכים מאז גרסה `2.6`, ומאפשרת לכל פני שעון של צד שלישי שתומך בסיבוכים להצגת נתונים קשורים ל-AAPS (גלוקוז בדם עם מגמה, IOB, COB, וכו').
 
-Complications also serve as **shortcut** to AAPS functions. By tapping them you can open AAPS related menus and dialogs (depending on complication type and configuration).
+סיבוכים משמשים גם כ-**קיצור דרך** לפונקציות של AAPS. על ידי הקשה עליהם תוכלו לפתוח תפריטים ודיאלוגים הקשורים ל-AAPS (מותנה בסוגי הסיבוכים ותצורות).
 
 ![Complications_On_Watchfaces](../images/Watchface_Complications_On_Watchfaces.png)
 
-### Complication Types
+### סוגי סיבוכים
 
-AAPS Wear OS app provides only raw data, according to predefined formats. It is up to third-party watchface to decide where and how to render complications, including its layout, border, color, and font. From many Wear OS complication types available, AAPS uses:
+אפליקציה AAPS Wear OS מספקת רק נתונים גולמיים, לפי פורמטים מוגדרים מראש. אופן הצגת התצורה, הגבולות, הצבעים והגופנים של הסיבוכים הוא באחריות יוצרי פני השעון. מסוגי הסיבוכים הרבים של Wear OS הקיימים, AAPS משתמש ב:
 
-* `SHORT TEXT` - Contains two lines of text, 7 characters each, sometimes referred to as value and label. Usually rendered inside a circle or small pill - one below another, or side by side. It is a very space-limited complication. AAPS tries to remove unnecessary characters to fit-in: by rounding values, removing leading and trailing zeroes from values, etc.
-* `LONG TEXT` - Contains two lines of text, about 20 characters each. Usually rendered inside a rectangle or long pill - one below another. It is used for more details and textual status.
-* `RANGED VALUE` - Used for values from predefined range, like a percentage. It contains icon, label and is usually rendered as circle progress dial.
-* `LARGE IMAGE` - Custom background image that can be used (when supported by watchface) as background.
+* `טקסט קצר` - מכיל שתי שורות של טקסט, 7 תווים כל אחת, אליהן מתייחסים לפעמים כערך ותווית. לרוב מוצגים בתוך עיגול או אליפסה - אחד מתחת לאחר, או זה לצד זה. זהו סיבוך עם מקום מוגבל ביותר. AAPS מנסה להסיר תווים לא נחוצים כדי להתאימם: על ידי עיגול ערכים, הסרת אפסים מקדימים או נגררים מהערכים וכו'.
+* `טקסט ארוך` - מכיל שתי שורות של טקסט, עם 20 תווים בערך כל אחד. בדרך כלל מוצגות בתוך מלבן או אליפסה ארוכה - אחת מתחת לשניה. משמש למצבים טקסטואלים יותר מפורטים.
+* `ערך טווח` - משמש לטווח מוגדר מראש של ערכים, כגון אחוזים. הוא מכיל צלמית, תווית ומוצג כחוגה מעוגלת של התקדמות.
+* `תמונה גדולה` - תמונת רקע מותאמת אישית שיכולה לשמש כרקע (כאשר היא נתמכת על ידי השעון).
 
-### Complication Setup
+### הגדרות סיבוכים
 
-To add complication to watchface, configure it by long press and clicking the gear icon below. Depending on how specific watchface configures them - either click on placeholders or enter the watchface setup menu for complications. AAPS complications are grouped under the AAPS menu entry.
+על מנת להוסיף סיבוך לתצוגת פני השעון, עצבו אותו על ידי לחיצה ארוכה והקשה על צלמית גלגל השיניים בהמשך למטה. בהתאם לאופן שבו השעון הספציפי מגדיר אותם - לחצו על מצייני מיקום או היכנסו לתפריט ההגדרות של פני השעון בשביל הסיבוכים. סיבוכים של AAPS מקובצים תחת כפריט בתפריט AAPS.
 
-When configuring complications on watchface, Wear OS will present and filter the list of complications that can be fit into selected complication place on watchface. If specific complications cannot be found on the list, it is probably due to its type that cannot be used for the given place.
+כאשר מעצבים סיבוכים בפני שעון, Wear OS יציג ויסנן את רשימת הסיבוכים שבהם אפשר לבחור בהתאם לפני השעון. אם סיבוכים מסויימים לא נמצאים ברשימה זו, יתכן שסוג הסיבוך לא מתאים למיקום זה.
 
-### Complications provided by AAPS
+### סיבוכים מסופקים על ידי AAPS
 
-AndroidAPS provides following complications:
+AndroidAPS מספק את סיבוכים הבאים:
 
 ![AAPS_Complications_List](../images/Watchface_Complications_List.png)
 
-* **BR, CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Basal Rate* on the first line and *Carbs on Board* and *Insulin on Board* on the second line.
-* **Blood Glucose** (`SHORT TEXT`, opens *Menu*): Displays *Blood Glucose* value and *trend* arrow on the first line and *measurement age* and *BG delta* on the second line.
-* **CoB & IoB** (`SHORT TEXT`, opens *Menu*): Displays *Carbs on Board* on the first line and *Insulin on Board* on the second line.
-* **CoB Detailed** (`SHORT TEXT`, opens *Wizard*): Displays current active *Carbs on Board* on the first line and planned (future, eCarbs) Carbs on the second line.
-* **CoB Icon** (`SHORT TEXT`, opens *Wizard*): Displays *Carbs on Board* value with a static icon.
-* **Full Status** (`LONG TEXT`, opens *Menu*): Shows most of the data at once: *Blood Glucose* value and *trend* arrow, *BG delta* and *measurement age* on the first line. On the second line *Carbs on Board*, *Insulin on Board* and *Basal Rate*.
-* **Full Status (flipped)** (`LONG TEXT`, opens *Menu*): Same data as for standard *Full Status*, but lines are flipped. Can be used in watchfaces which ignores one of two lines in `LONG TEXT`
-* **IoB Detailed** (`SHORT TEXT`, opens *Bolus*): Displays total *Insulin on Board* on the first line and split of *IoB* for *Bolus* and *Basal* part on the second line.
-* **IoB Icon** (`SHORT TEXT`, opens *Bolus*): Displays *Insulin on Board* value with a static icon.
-* **Uploader/Phone Battery** (`RANGED VALUE`, opens *Status*): Displays battery percentage of AAPS phone (uploader), as reported by AAPS. Displayed as percentage gauge with a battery icon that reflects reported value. It may be not updated in real-time, but when other important AAPS data changes (usually: every ~5 minutes with new *Blood Glucose* measurement).
+* **BR, COB & IOB** (`טקסט קצר`, פותח תפריט): מציג ערך גלוקוז בדם וחץ מגמה בשורה הראשונה וזמן ושינוי המדידה בשורה השנייה.
+* **Blood Glucose** (`טקסט קצר`, פותח* תפריט*): מציג ערך גלוקוז בדם וחץ מגמה בשורה הראשונה וזמן ושינוי המדידה בשורה השנייה.
+* **CoB & IoB** (`טקסט קצר`, פותח *תפריט*): מציג *פחמימות זמינות* בשורה הראשונה ו*אינסולין זמין* בשורה השנייה.
+* **CoB מפורט** (`טקסט קצר`, פותח *אשף*): מציג *פחמימות פעילות* בשורה הראשונה ופחמימות מתוכננות (בעתיד, פחמימות ממושכות) בשורה השנייה.
+* **צלמית CoB** (`טקסט קצר`, פותח *אשף*): מציג * ערך פחמימות פעילות* עם צלמית סטטית.
+* **Full Status** (`טקסט ארוך`, פותח *תפריט*): מציג את רוב הנתונים בבת-אחת: * ערך גלוקוז בדם *ו*חץ מגמה*,*שינוי גלוקוז בדם* ו* זמן המדידה* בשורה הראשונה. בשורה השנייה *פחמימות פעילות*, *אינסולין פעיל* ו*המינון הבזאלי*.
+* **Full Status (הפוך)** (`טקסט ארוך`, פותח *תפריט*): אותם נתונים כמו הסטטוס המלא הסטנדרטי אבל בשורות הפוכות. ניתן להשתמש בו בפני שעונים אשר מתעלמים מאחת משתי השורות ב`טקסט הארוך`
+* **IoB מפורט** (`טקסט קצר`, פותח * בולוס*): מציג סך אינסולין פעיל בשורה הראשונה ואת מרכיביו מבולוס ומינונים בזאליים, בשורה השניה.
+* **צלמית IoB** (`טקסט קצר`, פותח * בולוס*): מציג ערך אינסולין פעיל עם צלמית סטטית.
+* **סוללת הטלפון** (`ערך טווח`, פותח *סטטוס*): מציג את אחוז טעינת סוללת הטלפון, כפי שמדווח על ידי AAPS. מוצג באחוזים עם צלמית של סוללה שמייצגת את הערך המדווח. יתכן שלא יתעדכן בזמן אמת, אבל כן כאשר נתונים חשובים אחרים של AAPS משתנים (בדרך כלל כל 5 דקות עם קריאה חדשה של גלוקוז בדם).
 
-Additionally, there are three complications of `LARGE IMAGE` kind: **Dark Wallpaper**, **Gray Wallpaper** and **Light Wallpaper**, displaying static AAPS wallpaper.
+בנוסף קיימים עוד שלושה סיבוכים של `תמונה גדולה` סוג: **טפט כהה**, ** טפט אפור** ו**טפט בהיר**, המציג טפט סטטי של AAPS.
 
-### Complication related settings
+### הגדרות הקשורות לסיבוכים
 
-* **Complication Tap Action** (default `Default`): Decides which dialog is opened when user taps complication: 
-    * *Default*: action specific to complication type *(see list above)*
-    * *Menu*: AAPS main menu
-    * *Wizard*: bolus wizard - bolus calculator
-    * *Bolus*: direct bolus value entry
-    * *eCarb*: eCarb configuration dialog
-    * *Status*: status sub-menu
-    * *None*: Disables tap action on AAPS complications
-* **Unicode in Complications** (default `On`): When `On`, the complication will use Unicode characters for symbols like `Δ` Delta, `⁞` vertical dot separator or `⎍` Basal Rate symbol. Rendering of them depends on the font, and that can be very watchface-specific. This option allows switching Unicode symbols `Off` when needed - if the font used by custom watchface does not support those symbols - to avoid graphical glitches.
+* **פעולת הקשה על סיבוך** (ברירת מחדל `ברירת מחדל`): מחליט איזה דיאלוג נפתח כאשר המשתמש מקיש על הסיבוך: 
+    * *ברירת מחדל*: פעולה מסוימת לסוג הסיבוך *(ראו רשימה לעיל)*
+    * *תפריט*: תפריט ראשי של AAPS
+    * *אשף*: אשף בולוס - מחשבון בולוס
+    * *בולוס*: מינון בולוס ישיר
+    * *פחמימות ממושכות*: תיבת שיח של פחמימות ממושכות
+    * *סטטוס*: תפריט משני של הסטטוס
+    * *None*: מבטל את הפעולה של הסיבוך של AAPS
+* **יוניקוד בסיבוכים** (ברירת מחדל `On`): כאשר `On`, הסיבוך משתמש בתווי יוניקוד לסמלים כגון דלתא `Δ`, מפריד נקודות אנכי `⁞` או סימן של שיעור בזאלי `⎍`. הצגתם תלויה בגופן והיא יכולה להיות ספציפית לפני שעון מסוים. אפשרות זו מאפשרת להחליף סמלי יוניקוד `Off` כאשר נדרש - אם הגופן שבשימוש פני השעון לא תומך בסמלים אלה - כדי למנוע תקלות גרפיות.
+
+## Wear OS Tiles
+
+Wear OS Tiles provide easy access to users' information and actions to get things done. The tiles are only available on Android smartwatches running on Wear Os version 2.0 and higher.
+
+Tiles allow you to quickly access actions on the AAPS application without going through the watch face menu. The tiles are optional and can be added and configured by the user.
+
+The tiles are used "next to" any watch face. To access a tile, when enabled, swipe right to left on your watch face to show them.
+
+Please note; that the tiles do not hold the actual state of the AAPS phone app and will only make a request, which has to be confirmed on the watch before it is applied.
+
+## How to add Tiles
+
+Before using the tiles, you have to switch on "Control from Watch" in the "Wear OS" settings of Android APS.
+
+![Wear phone preferences enabled](../images/wear_phone_preferences.jpg)
+
+Depending on your Wear OS version, brand and smartphone there are two ways of enabling the tiles:
+
+1. On your watch, from your watch face; 
+    * Swipe right to left till you reach the "+ Add tiles" 
+    * Select one of the tiles.
+2. On your phone open the companion app for your watch. 
+    * For Samsung open "Galaxy Wearable", or for other brands "Wear OS"
+    * In the click on the section "Tiles", followed by "+ Add" button
+    * Find the AAPS tile you like to add by selecting it. ![Wear phone add tile](../images/wear_companion_app_add_tile.png) The order of the tiles can be changed by dragging and dropping
+
+The content of the tiles can be customized by long-pressing a tile and clicking the "Edit" or "gear icon" button.
+
+### APS(Actions) Tile
+
+The action tile can hold 1 to 4 user-defined action buttons. To configure, long-press the tile, which will show the configuration options. Similar actions are also available through the standard watch menu.
+
+Actions supported in the Action tile can request the AAPS phone app for:
+
+* **Calc**; do a bolus calculation, based on carb input and optional a percentage [1]
+* **Insulin**; request insulin delivery by entering the unit of insulin
+* **Treatment**; request both insulin delivery and add carbs
+* **Carbs**; add (extended) carbs
+* **TempT**; set a custom temporary target and duration
+
+![Wear action tile, sample calculator](../images/wear_actions.png)
+
+[1] Via, the Wear OS menu, set the "Calculator Percentage" option to "ON" to show the percentage input in the bolus calculator. The default percentage is based on the phone settings in the"Overview" section ["Deliver this part of the bolus wizard result %"](Config-Builder.html#advanced-settings) When the user does not provide a percentage, the default value from the phone is used. Configure the other parameters for the bolus calculator in the phone app via "Preferences" "Wizard Settings".
+
+### AAPS(Temp Target) Tile
+
+The Temp Target Tile can request a temporary target based on AAPS phone presets. Configure preset time and targets through the phone app setting by going to "Preferences", "Overview", ["Default Temp-Targets"](Config-Builder.html#default-temp-targets) and set the duration and targets for each preset. Configure the visible actions on the tile through the tile settings. Long press the tile to show the configuration options and select 1 to 4 options:
+
+* **Activity**; for sport
+* **Hypo**; to raise the target during hypo treatment
+* **Eating soon**; to lower the target to raise the insulin on board
+* **Manual**; set a custom temporary target and duration
+* **Cancel**; to stop the current temporary target
+
+![Wear actions tile edit](../images/wear_tile_tempt_edit.png)
+
+### AAPS(QuickWizard)Tile
+
+The QuickWizard tile can hold 1 to 4 quick wizard action buttons, defined with the phone app[2]. See [QuickWizard](Config-Builder.html#quickwizard-settings). You can set standard meals (carbs and calculation method for the bolus) to be displayed on the tile depending on the time of the day. Ideal for the most common meals/snacks you eat during the day. You can specify if the quick wizard buttons will show on the phone, watch, or both. Please note that the phone can show only one quick wizard button at a time. The quick wizard setup also can specify a custom percentage of the insulin for the bolus. The custom percentage enables you to vary, for example, snack at 120%, slow absorbing breakfast 80% and hypo treatment sugar snack at 0%
+
+![Wear actions tile and phone configuration](../images/quickwizard_watch_phone.png)
+
+[2] Wear OS limits tiles update frequency to only once every 30 seconds. When you notice that the changes on your phone are not reflected on the tile, consider; waiting 30 seconds, using the "Resend all data" button from the Wear OS section of AAPS, or removing the tile and adding it again. To change the order of the QuickWizard buttons dragging an item up or down.
 
 ## Always on
 
@@ -270,7 +334,7 @@ Since we cannot compromise on communication (we need up-to-date data) and want t
 
 ## View Nightscout data
 
-If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". There are several watchfaces to choose from that include average delta, IOB, currently active temp basal rate and basal profiles + CGM readings graph.
+If you are using another looping system and want to *view* your looping detail on an Android Wear watch, or want to watch your child's looping, then you can build/download just the NSClient APK. To do this follow the [build APK instructions](../Installing-AndroidAPS/Building-APK.md) selecting the build variant "NSClientRelease". ישנן כמה תצוגות לשעונים לבחירה אשר כוללים שינוי ממוצע, אינסולין זמין, מינון בזאלי זמני הנוכחי, פרופילים בזאליים וגרפים של קריאות מדידות גלוקוז בדם.
 
 # Pebble
 

@@ -7,7 +7,7 @@
 </tr>
 <tr>
  <td><strong>AAPS</strong></td>
- <td>AndroidAPS - Système Pancréas Artificiel</td>
+ <td>AndroidAPS is the name of the Android app - AAPS ist the abbrevation - APS is a abrevation used for artificial pancreas system</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -29,9 +29,9 @@
   </td>
 <tr>
  <td><strong>Android Auto</strong></td>
- <td>Affichage des notifications AAPS sur l'écran intégré au tableau de bord de votre voiture</td>
+ <td>Android Auto is a system developed by Google LLC to use functions of an Android smartphone with the infotainment system in motor vehicles. Through Android Auto AndroidAPS can send messages to your compatible and configured infotainment system.</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Android-auto.html">Docs - Android Auto</a></td>
+ <td><a href="../Usage/Android-auto.html">Wiki - android auto</a><br><a href="https://www.android.com/intl/en_en/auto/">Google Android Auto</a></td>
 </tr>
 </tr>
 <tr>
@@ -48,7 +48,7 @@
 </tr>
 <tr>
  <td><strong>Azure</strong></td>
- <td>plateforme cloud pour héberger les données Nightscout</td>
+ <td>cloud computing platform to host Nightscout web app</td>
  <td>Heroku / Nightscout</td>
  <td><a href="https://azure.microsoft.com/">Azure</a></td>
 </tr>
@@ -72,31 +72,31 @@
 </tr>
 <tr>
 <td><strong>Source des glycémies</strong></td>
- <td>D'où proviennent vos valeurs de glycémie?</td>
+ <td>The blood glucose source is the source where your blood glucose values come from. They come from a CGM or FGM system which you wear through some kind of integration software like BYODA, xDrip+ etc.</td>
  <td>MGC / MGF</td>
  <td><a href="../Configuration/Config-Builder.html#source-gly">Docs - source Glycémie</a></td>
 </tr>
 <tr>
  <td><strong>Blucon Nightreader</strong></td>
- <td>transmetteur bluetooth pour transformer le Freestyle Libre en MGC</td>
+ <td>The first versions of Freestyle Libre have only be able to communicate via NFC which means that the patient had to hold his mobile actively very near to the sensor. The Blucon Nightreader closed this gap. Newer versions work in other ways! Please inform yourself about the actual state before buying something.</td>
  <td>BlueReader / MiaoMiao</td>
  <td><a href="https://www.ambrosiasys.com/our-products/blucon/">Ambrosia Blucon Nightreader</a></td>
 </tr>
 <tr>
  <td><strong>DB (BR)</strong></td>
- <td>Débit de Base</td>
- <td>&nbsp;</td>
+ <td>The abbrevation stands for basal rate. It's the amount of insulin in a given time block to maintain BG at a stable level.</td>
+ <td>IC / ISF</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>BYODA</strong></td>
- <td>'Construire votre propre application Dexcom patchée'</td>
+ <td>Build your own Dexcom App - it's a special way to generate your own Dexcom App for reading out the sensor data</td>
  <td>&nbsp;</td>
- <td>[Dexcom G6](../Hardware/DexcomG6.html#si-vous-utilisez-le-g6-avec-votre-propre-application-dexcom)</td>
+ <td><a href="../Hardware/DexcomG6.html#if-using-g6-with-build-your-own-dexcom-app">Dexcom G6</a></td>
 </tr>
 <tr>
  <td><strong>AgeC</strong></td>
- <td>Age Canule - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS ou par l'intermédiaire de l'action 'AMORCER' de l'onglet ACT</td>
+ <td>cannula age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
   <td>&nbsp;</td>
 </tr>
@@ -109,7 +109,7 @@
 <tr>
  <td><strong>MGC</strong></td>
  <td>Mesure de Glycémie en Continue</td>
- <td>&nbsp;</td>
+ <td>MGF</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -120,8 +120,8 @@
 </tr>
 <tr>
  <td><strong>GA</strong></td>
- <td>Glucides Actifs</td>
- <td>&nbsp;</td>
+ <td>carbs on board - Carbs on board is the amount of carbohydrates currently available for digestion.</td>
+ <td>IA</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
@@ -138,19 +138,19 @@
 </tr>
 <tr>
  <td><strong>eGLUC</strong></td>
- <td>"Glucides Etendus" - glucides mettant plusieurs heures à être assimilés (notamment avec beaucoup de graisses ou de protéines)<br>les bolus étendus que vous pourriez connaître da,s le cas d'une thérapie sous pompe à insuline n'ont pas beaucoup d'intérêt dans le cas d'une boucle fermée</td>
+ <td>"extended carbs" - carbs split up over several hours (i.e. lot of fat/protein)<br>extended boluses you might know from regular pump therapy do not make much sense when looping</td>
  <td>SMB</td>
  <td><a href="../Usage/Extended-Carbs.html#glucides-etendus-eglucides">Docs - eGLUC</a><br><a href="https://adriansloop.blogspot.com/2018/04/page-margin-0.html">Cas d'utilisation des glucides étendus</a></td>
 </tr>
 <tr>
  <td><strong>MGF</strong></td>
  <td>Mesure de Glycémie Flash (Freestyle Libre)</td>
- <td>&nbsp;</td>
+ <td>MGC</td>
  <td><a href="../Configuration/BG-Source.html">Docs - source Glycémie</a></td>
 </tr>
 <tr>
  <td><strong>git</strong></td>
- <td>système de contrôle des versions pour le suivi des modifications dans les fichiers informatiques et la coordination des travaux sur les fichiers <br>-> nécessaire pour les mises à jour de l'APK</td>
+ <td>git in our context here is the tool to mainly download the AndroidAPS sources from Github for the build process. It's version-control system for tracking changes in computer files and coordinating work on those files especially for teams.<br>-> necessary for APK updates</td>
  <td>&nbsp;</td>
  <td><a href="../Installing-AndroidAPS/Update-to-new-version.html">Wiki - mettre à jour le fichier APK</a></td>
 </tr>
@@ -168,7 +168,7 @@
 </tr>
 <tr>
  <td><strong>Heroku</strong></td>
- <td>plateforme cloud pour héberger les données Nightscout</td>
+ <td>cloud computing platform to host Nightscout web app</td>
  <td>Azure / Nightscout</td>
  <td><a href="https://www.heroku.com">Heroku</a></td>
 </tr>
@@ -180,7 +180,7 @@
 </tr>
 <tr>
  <td><strong>IA</strong></td>
- <td>Insuline Active dans votre corps</td>
+ <td>insulin on board -  Units of insulin currently active in your body</td>
  <td>&nbsp;</td>
  <td>&nbsp;</td>
 </tr>
@@ -204,7 +204,7 @@
 </tr>
 <tr>
  <td><strong>Fichiers log</strong></td>
- <td>enregistrement de toutes les actions d'AAPS (utiles pour le dépannage et le débogage)</td>
+ <td>record of all AAPS actions (useful for troubleshooting and debugging)</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/Accessing-logfiles.html#acces-aux-fichiers-log">Wiki - fichiers log</a></td>
 </tr>
@@ -222,27 +222,27 @@
 </tr>
 <tr>
  <td><strong>min_5m_carbimpact</strong></td>
- <td>fonction de sécurité - quantité de glucides assimilés par défaut lorsque l’absorption ne peut pas être calculée dynamiquement en fonction de vos glycémies</td>
+ <td>safety feature - default carb decay at times when carb absorption can’t be dynamically worked out based on your BG reactions</td>
  <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#parametres-dabsorption">Wiki - Générateur de configuration</a></td>
 </tr>
 <tr>
  <td><strong>Nightscout</strong></td>
- <td>projet open source pour accéder aux données MGC (CGM) et faire des rapports</td>
+ <td>projet open source pour accéder aux données MGC (CGM) et faire des rapports. It's the central data hub for all your diabetes data. It is where AndroidAPS is storing the data. It's available e.g. for parents following their childs diabetes management or reporting of the historical data to get the actual state of the diabetes control (expected HbA1c, time in range) or search for patterns in the data via percentilr chart etc..</td>
  <td>Nightscout Reporter</td>
  <td><a href="https://nightscout.github.io/">Nightscout</a></td>
+</tr>
+<tr>
+ <td><strong>Nightscout Reporter</strong></td>
+ <td>Tool from fellow looper to generate PDF reports from Nightscout web app data e.g. for meetings with your diabetes team.</td>
+ <td>Nightscout</td>
+ <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a> <br> <a href="https://www.facebook.com/nightrep/">NS Reporter @Facebook</a></td>
 </tr>
 <tr>
  <td><strong>NS Client</strong></td>
  <td>fait partie d'AAPS pour se connecter à votre site Nightscout</td>
  <td>&nbsp;</td>
- <td><a href="../Usage/Troubleshooting-NSClient.html#depannage-nsclient">Wiki - NS Client</a></td>
-</tr>
-<tr>
- <td><strong>Nightscout Reporter</strong></td>
- <td>Outil permettant aux utilisateurs de la boucle fermée de générer des rapports PDF à partir des données enregistrées dans Nightscout</td>
- <td>Nightscout</td>
- <td><a href="https://nightscout-reporter.zreptil.de/">Nightscout Reporter</a> <br> <a href="https://www.facebook.com/nightrep/">NS Reporter @Facebook</a></td>
+ <td><a href="../Usage/Troubleshooting-NSClient.html#troubleshooting-nsclient">Wiki - NS Client</a></td>
 </tr>
 <tr>
  <td><strong>Objectifs</strong></td>
@@ -252,13 +252,13 @@
 </tr>
 <tr>
  <td><strong>OpenAPS</strong></td>
- <td>système de pancréas artificiel ouvert<br>APS marche sur des petits ordinateurs (ex. Raspberry Pie)<br>AAPS utilise quelques fonctionnalités de OpenAPS</td>
+ <td>open artificial pancreas system<br>APS run on small computers (i.e. Raspberry Pi)<br>AAPS uses some of the OpenAPS features</td>
  <td>&nbsp;</td>
  <td><a href="https://openaps.readthedocs.io">Documentation OpenAPS</a></td>
 </tr>
 <tr>
  <td><strong>Boucle Ouverte</strong></td>
- <td>le système proposera des ajustements recommandés qui doivent être effectués manuellement sur la pompe</td>
+ <td>system will suggest recommended adjustments which have to be confirmed manually in the application</td>
  <td>Boucle Fermée</td>
  <td><a href="../Configuration/Config-Builder.html#boucle-ouverte">Wiki - Générateur de configuration</a></td>
 </tr>
@@ -276,7 +276,7 @@
 </tr>
 <tr>
  <td><strong>HP</strong></td>
- <td>historique de la pompe (entrée dans l'onglet traitements)</td>
+ <td>pump history - you access it in the treatments which are located on the 3 dot menu on the right side of AndroidAPS main screen</td>
  <td>&nbsp;</td>
  <td><a href="../Getting-Started/Screenshots.html#traitement">Captures d'écran</a></td>
 </tr>
@@ -288,8 +288,8 @@
 </tr>
 <tr>
  <td><strong>Profil</strong></td>
- <td>paramètres de traitement (débits de base, DAI, G/I, SI, cible Gly)<br>peuvent être définis localement ou via Nightscout</td>
- <td>Nightscout</td>
+ <td>basic treatment settings (basal rate, DIA, IC, ISF, BG target)<br>AndroidAPS v3 only supports local profiles but Nightscout profiles can be copied (synchronized) to AndroidAPS</td>
+ <td>&nbsp;</td>
  <td><a href="../Configuration/Config-Builder.html#profil">Wiki - profil</a></td>
 </tr>
 <tr>
@@ -312,7 +312,7 @@
 </tr>
 <tr>
  <td><strong>AgeC</strong></td>
- <td>âge du capteur - affiché dans Nightscout si l'information a été renseignée dans l'onglet / menu Actions de AAPS</td>
+ <td>sensor age - displayed on the homescreen of AndroidAPS and in Nightscout if information was entered in the actions tab / menu</td>
  <td>Nightscout</td>
  <td>&nbsp;</td>
 </tr>
@@ -349,24 +349,24 @@
 <tr>
  <td><strong>DTB (TBB)</strong></td>
  <td>Débit Total de Base (somme des débits de base sur 24 heures</td>
- <td>&nbsp;</td>
+ <td>DBT / DTQ</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>DBT (TBR)</strong></td>
  <td>Débit de Base Temporaire</td>
- <td>&nbsp;</td>
+ <td>TBB / TDD</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
- <td><strong>DTI</strong></td>
+ <td><strong>DTQ</strong></td>
  <td>Dosage Total d'Insuline (bolus + base par jour)</td>
- <td>&nbsp;</td>
+ <td>TBB / TBR</td>
  <td>&nbsp;</td>
 </tr>
 <tr>
  <td><strong>CT</strong></td>
- <td>Cible Temporaire<br>augmentation / diminution temporaire de la cible glycémique (plage)</td>
+ <td>temporary target<br>temporary increase/decrease of BG target (range) e.g. for eating or sport activities</td>
  <td>&nbsp;</td>
  <td><a href="../Usage/temptarget.html#cibles-temporaires">Wiki - Cibles temp.</a></td>
 </tr>

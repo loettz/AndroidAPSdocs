@@ -6,12 +6,9 @@
 
 Uyarılar ve bildirimler için sistem bildirimlerini kullan:
 
-* Ana ekranın sağ üst köşesindeki 3 noktalı menüyü açın
-* Tercihler
-* Tüm menüyü aşağı kaydır ve "yerel uyarılar"ı genişlet
-* "Uyarılar ve bildirimler için sistem bildirimlerini kullan..." seçeneğini etkinleştir.
+* Ana ekranın sağ üst köşesindeki 3 noktalı menüyü açın ve **Tercihler** ➜ **Yerel Uyarılar** ➜ öğesini seçin ve **Uyarılar ve bildirimler için sistem bildirimlerini kullan**'ı etkinleştirin 
 
-![Uyarılar ve bildirimler için sistem bildirimlerini kullan](../images/AndroidAuto_01.png)
+![Uyarılar ve bildirimler için sistem bildirimlerini kullan](../images/AndroidAuto_01v2.png)
 
 ## Telefonunuzdaki Android Auto uygulamasındaki ayarlar
 

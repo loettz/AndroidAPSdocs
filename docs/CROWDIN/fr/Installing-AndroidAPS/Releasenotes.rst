@@ -15,7 +15,7 @@ Veuillez comprendre que cette modification n'a pas pour but de vous corriger mai
 
 Version d'Android et version AAPS
 ====================================
-Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS 3. .0 et supérieur car il nécessite au moins Android 9.
+Si votre smartphone utilise une version d'Android antérieure à Android 9, vous ne pourrez pas utiliser AAPS v3 et supérieur car il nécessite au moins Android 9.
 
 Afin de permettre aux utilisateurs ayant une ancienne version d'Android d'utiliser une ancienne version de AAPS de nouvelles versions ont été poussées qui ne changent que la vérification de version. Aucune autre amélioration n'est incluse.
 
@@ -27,12 +27,39 @@ Android 9 et supérieur
 Android 8
 ------------------------------------
 * Utiliser la version **2.8.2.1** d'AAPS
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.8.2.1
+* Téléchargez le code AAPS depuis https://github.com/nightscout/AndroidAPS branche 2.8.2.1
 
 Android 7
 ------------------------------------
 * Utiliser la version **2.6.2** d'AAPS
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+* Téléchargez le code AAPS depuis https://github.com/nightscout/AndroidAPS branche 2.6.2
+
+Version 3.1.0
+================
+Date de sortie : 19-07-2022
+
+Conseils importants
+----------------------
+* après la mise à jour désinstallez l'application Wear et installez la nouvelle version
+* Utilisateurs d'Omnipod : faites la mise à jour lors d'un changement de pod !!!
+
+Modifications
+----------------------
+* correction des problèmes de la version 3.0
+* correction du blocage de l'application @MilosKozak
+* correction du driver DASH @avereha
+* correction du driver Dana @MilosKozak
+* Amélioration énorme de l'interface UI, nettoyage et standardisation, migration vers "material design", styles, thème blanc, nouvelles icônes. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* widget @MilosKozak
+* support MGC Aidex @andyrozman @markvader (seulement Pumpcontrol)
+* Montre `les tuiles de Wear OS <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, traductions @Andries-Smit
+* code Wear refactorisé. Plus compatible avec les versions précédentes @MilosKozak
+* améliorations a11y @Andries-Smith
+* nouvelle option de protection par code PIN @Andries-Smit
+* modification de l'échelle graphique possible à partir du menu @MilosKozak
+* plus de statistiques disponibles @MilosKozak
+* Plugin MIQ supprimé en faveur de la pompe virtuelle
+* nouvelle action d'automatisation : Arrêter le traitement (règles suivantes)
 
 Version 3.0.0
 ================
@@ -58,9 +85,9 @@ Etapes de préparation
 Modifications
 ----------------------
 * 100k lignes changées, 105k nouvelles lignes de code
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Support de l'Omnipod DASH <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Support de Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
+* `Support de la DiaconnG8 <../Configuration/DiaconnG8.html>`_
 * Support de Glunovo
 * Base de données interne mise à niveau vers Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Beaucoup de code réécrit en Kotlin @MilosKozak
@@ -170,7 +197,7 @@ Date de sortie : 24-09-2020
 
 **Assurez vous de vérifier et ajuster vos paramètrages après la mise à jour vers la version 2.7 comme c'est décrit** `ici <../Installing-AndroidAPS/update2_7.html>`__.
 
-Vous devez au moins démarrer l'`objectif 11 <../Usage/Objectives.html#objectif-11-automation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 11 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 11 <../Usage/Objectives.html#objectif-11-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
+Vous devez au moins démarrer l'`objectif 10 (objectif 11 dans les anciennes versions) <../Usage/Objectives.html#objectif-10-automatisation>`_ afin de continuer à utiliser la `fonction d'automatisation <../Usage/Automation.html>`_ (tous les objectifs précédents doivent être complétés, sinon le démarrage de l'objectif 10 n'est pas possible). Si par exemple vous n'avez pas encore terminé l'examen dans l'`objective 3 <../Usage/Objectives. tml#objectif-3-prouver-ses-connaissances>`_ , vous devrez terminer l'examen avant de pouvoir commencer l'`objective 10 <../Usage/Objectives.html#objectif-10-automatisation>`_. Cela n'affectera pas les autres objectifs que vous avez déjà terminés. Vous conserverez tous les objectifs terminés !
 
 Nouvelles fonctionnalités majeures
 ----------------------
@@ -193,7 +220,7 @@ Nouvelles fonctionnalités majeures
 * petits correctifs Insight @TebbeUbben @MilosKozak
 * option `"Langue par défaut" <../Configuration/Preferences.html#general>`_ @MilosKozak
 * icônes vectorielles @Philoul
-* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-du-telephone-androidaps>`_ @Tornado-Tim
+* `définir une basal temp neutre pour les pompes MDT <../Configuration/MedtronicPump.html#configuration-de-la-pompe>`_ @Tornado-Tim
 * amélioration de l'Historique @MilosKozak
 * suppression de l'algorithme OpenAPS MA @Tornado-Tim
 * suppression de la sensibilité Oref0 @Tornado-Tim
@@ -275,7 +302,7 @@ Nouvelles fonctionnalités majeures
 ------------------
 * Petites modifications de l'affichage (page d'accueil...)
 * Onglet/Menu Careportal supprimé - plus de détails `ici <../Usage/CPbefore26.html>`__
-* New `Local Profile plugin <../Configuration/Config-Builder.html#local-profile>`_
+* Nouveau `Plugin Profil Local <../Configuration/Config-Builder.html#profil-local>`_
 
   * Le profil local peut contenir plusieurs profils
   * Les profils peuvent être dupliqués et modifiés
@@ -283,7 +310,7 @@ Nouvelles fonctionnalités majeures
   * Les anciens changements de profil peuvent être dupliqués veres un nouveau profil local (décalage horaire et pourcentage appliqués)
   * Sélecteur pour les cibles temps
 * Le Profil Simple est supprimé
-* `Extended bolus <../Usage/Extended-Carbs.html#extended-bolus-and-switch-to-open-loop-dana-and-insight-pump-only>`_ feature - closed loop will be disabled
+* `Bolus étendu <../Usage/Extended-Carbs.html#bolus-etendus-et-passage-en-boucle-ouverte-uniquement-pour-les-pompes-dana-et-insight>`_ - la boucle fermée sera désactivée
 * Plugin MDT : Correction du bug entrées dupliquées
 * Les unités ne sont pas définies dans le profil mais c'est un paramètre global
 * Ajout de nouveaux paramètres à l'assistant de démarrage

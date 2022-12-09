@@ -15,7 +15,7 @@ Por favor, entienda que este cambio no tiene la intención de molestarlo, sino q
 
 Versión de Android y versión de AAPS
 ====================================
-Si tu teléfono móvil utiliza una versión de Android inferior a Android 9, no podrás usar la versión AAPS 3.0.0, ya que la nueva versión requiere al menos la versión de Android 9.
+If your smartphone uses an Android Version older than Android 9 you will not be able to use AAPS v3 and up as it requires at least Android 9.
 
 Se han lanzado nuevas versiones de AAPS que sólo comprueban la versión de Android del teléfono, para permitir a los usuarios instalar versiones anteriores de AAPS en teléfonos con versiones de Android inferiores a Android 9. No se incluyen otras mejoras.
 
@@ -27,16 +27,43 @@ Android 9 y superiores
 Android 8
 ------------------------------------
 * Usar la versión de AAPS **2.8.2.1**
-* Download AAPS Code from https://github.com/nightscout/AndroidAPS branch 2.8.2.1
+* Descargar el código de AAPS desde https://github.com/nightscout/AndroidAPS branch 2.8.2.1
 
 Android 7
 ------------------------------------
 * Usar la versión de AAPS **2.6.2**
-* Download AAPS Code from https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+* Descargar el código de AAPS desde https://github.com/nightscout/AndroidAPS branch 2.6.2
 
-Version 3.0.0
+Versión 3.1.0
 ================
-Release date: 31-01-2022
+Release date: 19-07-2022
+
+Notas importantes
+----------------------
+* Después de actualizar, desinstalar la aplicación Wear del reloj e instalar la nueva versión (no se puede actualizar directamente)
+* Omnipod users: update on pod change !!!
+
+Cambios
+----------------------
+* Corrección de errores de la versión 3.0
+* Corrección de congelación de la aplicación @MilosKozak
+* Correcciones de los controladores de las bombas DASH @avereha
+* Corrección de controladores de las bombas Dana @MilosKozak
+* Importantes mejoras de la interfaz gráfica (UI), limpieza y unificación. Migración a "Material Design", estilos, tema claro, nuevos iconos, etc. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* Añadido Widget @MilosKozak
+* Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
+* Código Wear refactorizado No compatible con versiones anteriores @MilosKozak
+* a11y improvements @Andries-Smit
+* Nueva opción de protección PIN @Andries-Smit
+* Permite cambiar la escala gráfica desde el menú @MilosKozak
+* Más estadísticas disponibles @MilosKozak
+* Complemento MDI eliminado en favor de la Bomba Virtual
+* new automation action: StopProcessing (following rules)
+
+Versión 3.0.0
+================
+Fecha de lanzamiento: 31-01-2022
 
 Notas importantes
 ----------------------
@@ -44,23 +71,23 @@ Notas importantes
 * **Los datos no se migran a la nueva base de datos.** Los cambios son tan importantes que simplemente no es posible hacerlo. Debido a esto, después de actualizar a la nueva versión, la insulina activa (IOB), carbohidratos (COB), tratamientos, etc. serán eliminados. Tienes que crear un nuevo `cambio de perfil <../Usage/Profiles.html>`_ y empezar con los valores de insulina activa (IOB) y carbohidratos (COB) a cero. ¡Planifica la actualización con cuidado! La mejor situación para realizar la actualización es cuando no tengamos insulina activa ni carbohidratos.
 * Usa la misma versión de AAPS y NSClient
 
-**Make sure to check and adjust settings after updating to 3.0 as described** `here <../Installing-AndroidAPS/update3_0.html>`__.
+**Asegúrate de comprobar y ajustar las configuraciones después de actualizar a la versión 3.0, tal y como se describe** `aquí<../Installing-AndroidAPS/update3_0.html>`__.
 
 Pasos de preparación
 ----------------------
 **Al menos dos días antes de la actualización:**
 
 * Deshabilitar el "puente" entre Dexcom y Nightscout
-* if you are using G5/G6 and xDrip as a collector, you have to update xDrip to a nightly version newer than 14th January 2022
-* if you are using G5/G6 switching to BYODA as collector is recommended to take advantage of back-smoothing (you can still use xDrip for other purposes, xDrip can receive data from BYODA)
+* Si estás usando Dexcom G5/G6 y xDrip+ como recolector, tienes que actualizar al menos a la versión de xDrip+ del 14 de Enero de 2022 
+* Si estás usando G5/G6, es recomendable cambiar a BYODA, ya que permite el suavizado de datos (puedes seguir usando xDrip+ para otros propósitos, xDrip puede recibir los datos de BYODA)
 
 
 Cambios
 ----------------------
 * 100k lineas cambiadas, 105k nuevas líneas de código
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Soporte Omnipod DASH <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * `Soporte para Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
-* `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
+* `Soporte DiaconnG8 <../Configuration/DiaconnG8.html>`_
 * Soporte para Glunovo
 * Base de datos interna actualizada a Room @MilosKozak @Tebbe @AdrianLxm @Philoul @andyrozman
 * Gran cantidad de código reescrito a Kotlin @MilosKozak
@@ -74,12 +101,12 @@ Cambios
 
 * Cambio en el comportamiento del cambio de perfil. Ahora se hace una distinción entre Cambio de Perfil *(realizado por el usuario)* y el Cambio de Perfil *(cuando el cambio es ejecutado por la bomba)* @MilosKozak @Tebbe
 * Puedes comenzar el objetivo temporal de actividad desde el cambio de perfil @MilosKozak
-* NSProfile is gone, just local profile can be used. Local profile can be `synced to NS <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
-* Forgotten `master password reset procedure <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
+* NSProfile ha desaparecido, sólo se puede utilizar el perfil local. El perfil local puede ser `Sincronizado a Nightscout <../Installing-AndroidAPS/update3_0.html#nightscout-profile-cannot-be-pushed>`_. @MilosKozak.
+* Procedimiento de `restablecimiento de la contraseña maestra <../Installing-AndroidAPS/update3_0.html#reset-master-password>`_ @MilosKozak
 * Seguimiento de las acciones del usuario @Philoul
 * Nuevo desencadenador llamado TempTargetValue disponible en las automatizaciones @Philoul
-* New automation Careportal action @Philoul
-* Add Bolus reminder in Carbs Dialog @Philoul
+* Nueva acción de automatización Careportal @Philoul
+* Añadido recordatorio de bolo en el diálogo de carbohidratos @Philoul
 * Asistente de bolos mejorado
 * Mejoras en la interfaz del usuario @MilosKozak
 * Nuevos botones de usuario para las automatizaciones @MilosKozak
@@ -170,7 +197,7 @@ Fecha de lanzamiento: 24-09-2020
 
 **Make sure to check and adjust settings after updating to 2.7 as described** `here <../Installing-AndroidAPS/update2_7.html>`__.
 
-You need at least start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-11-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
+You need at least start `objective 11 (in later versions objective 10!) <../Usage/Objectives.html#objective-10-automation>`_ in order to continue using `Automation feature <../Usage/Automation.html>`_ (all previous objectives must be completed otherwise starting Objective 11 is not possible). If for example you did not finish the exam in `objective 3 <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ yet, you will have to complete the exam before you can start `objective 11 <../Usage/Objectives.html#objective-10-automation>`_. This will not effect other objectives you have already finished. You will keep all finished objectives!
 
 Nuevas características importantes
 ----------------------
@@ -193,7 +220,7 @@ Nuevas características importantes
 * small Insight fixes @TebbeUbben @MilosKozak
 * `"Default language" option <../Configuration/Preferences.html#general>`_ @MilosKozak
 * vector icons @Philoul
-* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-phone-androidaps>`_ @Tornado-Tim
+* `set neutral temps for MDT pump <../Configuration/MedtronicPump.html#configuration-of-the-pump>`_ @Tornado-Tim
 * History browser improvements @MilosKozak
 * removed OpenAPS MA algorithm @Tornado-Tim
 * removed Oref0 sensitivity @Tornado-Tim

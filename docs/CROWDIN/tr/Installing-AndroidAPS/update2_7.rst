@@ -18,9 +18,9 @@ KŞ kaynağını kontrol edin
 
 Sınavı bitir
 -----------------------------------------------------------
-* AAPS 2.7, `otomasyon <../Usage/Automation.html>`_ için yeni 11. görevi içerir.
-* 11.Görevi `tamamlamak için de <../Usage/Objectives.html#objective-11-automation>`_ sınavı bitirmiş olmanız (`3. ve 4. görev <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) gerekir.
-* Örneğin, `3.görev <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ içindeki sınavı henüz bitirmediyseniz, ` 11.hedefe <../Usage/Objectives.html#objective-11-automation>`_ başlamadan önce sınavı tamamlamanız gerekir. 
+* AAPS 2.7, `otomasyon <../Usage/Automation.html>" için yeni görev 11'i (sonraki sürümlerde hedef 10 olarak yeniden numaralandırılmıştır!) içerir.
+* 11.Görevi `tamamlamak için de <../Usage/Objectives.html#objective-10-automation>`_ sınavı bitirmiş olmanız (`3. ve 4. görev <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_) gerekir.
+* Örneğin, `3.görev <../Usage/Objectives.html#objective-3-prove-your-knowledge>`_ içindeki sınavı henüz bitirmediyseniz, ` 11.hedefe <../Usage/Objectives.html#objective-10-automation>`_ başlamadan önce sınavı tamamlamanız gerekir. 
 * Bu, daha önce tamamladığınız diğer görevleri etkilemeyecektir. Tüm tamamlanmış görevler korunacaktır!
 
 Ana parola tanımlama

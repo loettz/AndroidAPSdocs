@@ -1,12 +1,20 @@
 # Test edilen Telefonların Listesi
 
-Kullanıcılar bir [test edilmiş telefonlar ve saatler listesi](https://docs.google.com/spreadsheets/d/1gZAsN6f0gv6tkgy9EBsYl0BQNhna0RDqA9QGycAqCQc/edit?usp=sharing) oluşturuyor
+Şu anda, bir pompa sürücüsünün son geliştirmesi bunlar için olduğundan ve ilk benimseyenler arasında daha fazla iletişime ihtiyaç duyulduğundan, dost canlısı bir ilgilenen, Omnipods insülin pompalarıyla kullanılan telefonlarda AndroidAPS için bir liste tutuyor.
 
-Belirli pompaları veya telefonları görüntülemek için filtreleri kullanabilirsiniz, ancak lütfen aramayı bitirdiğinizde, bir sonraki kişinin hepsini görüntüleyebilmesi için tümünü görünür bırakın.
+İleride başka bir donanım listesine ihtiyaç duyulursa ve birileri bu listeyle ilgilenmek isterse, lütfen bizimle iletişime geçin!
 
-Tabloda listelenmemiş bir telefonu veya saati kaydetmek için lütfen [formu](https://docs.google.com/forms/d/e/1FAIpQLScvmuqLTZ7MizuFBoTyVCZXuDb__jnQawEvMYtnnT9RGY6QUw/viewform) doldurun.
+Listenin şu anki yöneticisi, veri girmeyi kolaylaştırmak, ancak aynı zamanda mevcut verilerin yanlışlıkla üzerine yazılmamasını veya silinmemesini sağlamak için çok zaman ve çaba harcadı. Bu deneyim, Google E-Tablolar ile yeniden oluşturulabilir.
 
-Tabloyla ilgili herhangi bir sorun varsa lütfen hardware@androidaps.org adresine e-posta gönderin, test edilmesini istediğiniz telefon/saat bağışları için lütfen donations@androidaps.org adresine e-posta gönderin.
+## Omnipod
+
+Test edilen telefonların listesine aşağıdaki bağlantıdan erişilebilir [Omnipod insülin pompalı test edilmiş telefonların listesi](https://docs.google.com/spreadsheets/d/1zO-Vf3wv0jji5Gflk6pe48oi348ApF5RvMcI6NG5TnY)
+
+CTRL-F ile Google sayfasının metninde arama yapabilirsiniz. Sayfa yazmaya karşı korumalıdır. Bir telefon testinizi kaydetmek için lütfen [formu](https://forms.gle/g7GbSkMCTfFrWKjSA) doldurun.
+
+Form verilerini doldurduktan sonra, bakıcı verileri kontrol edecek ve yayınlamak için onaylayacaktır!
+
+E-tabloyla ilgili herhangi bir sorun varsa, lütfen doğrudan veya openaps/AndroidAPSDocs projesi için bir GitHub sorunu aracılığıyla bizimle iletişime geçin.
 
 # Telefon Arka Planı
 

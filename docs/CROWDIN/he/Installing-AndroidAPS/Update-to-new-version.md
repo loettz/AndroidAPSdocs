@@ -1,8 +1,8 @@
-# Update to a new version or branch
+# עדכון לגרסה חדשה או לענף חדש
 
-## Build yourself instead of download
+## בנייה עצמית במקום הורדה
 
-**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! See [FAQ page](../Getting-Started/FAQ.md) for details.**
+**AndroidAPS is not available as download due to regulation for medial devices. It is legal to build the app for your own use but you must not give a copy to others! ראו [שאלות נפוצות](../Getting-Started/FAQ.md) לפרטים.**
 
 ## Important notes
 
@@ -63,19 +63,25 @@ If you have already changed the URL or update from version 2.8.x, follow these s
 
 ## 3. Build the Signed APK
 
-* Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
+Your sourcecode is now the current released version. It's time to build the signed apk from it as described in the [build signed apk section](../Installing-AndroidAPS/Building-APK#generate-signed-apk).
 
 ## 4. Transfer the apk
 
-You need to transfer the apk to your phone so you can install it. See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+You need to transfer the apk to your phone so you can install it.
 
-## 5. Check AAPS version on phone
+See the instructions for [Transfer APK to smartphone](../Installing-AndroidAPS/Building-APK#transfer-apk-to-smartphone)
+
+## 5. Install apk
+
+בטלפון החכם שלכם עליכם לאפשר התקנה ממקורות לא ידועים. מדריכים לכך ניתן למצוא באינטרנט (כלומר [כאן](https://www.expressvpn.com/de/support/vpn-setup/enable-apk-installs-android/) או [כאן](https://www.androidcentral.com/unknown-sources)). Note: If you completed the build with the same existing key store in Android Studio, then you do not need to remove the existing app on your phone. When you install the apk, follow the prompts to install updates. For other scenarios such as establishing a new key store in Android Studio for your signed apk, you will need to delete the old app before installing the apk.
+
+## 6. Check AAPS version on phone
 
 After you installed the new apk, you can check the AAPS version on your phone by clicking the three dots menu on the top right and then About. You should see the current version.
 
 ![AAPS version installed](../images/Update_VersionCheck282.png)
 
-# Troubleshooting
+# פתרון בעיות
 
 If anything goes wrong, don't panic.
 

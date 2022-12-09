@@ -32,7 +32,34 @@ Android 8
 Android 7
 ------------------------------------
 * Verwende AAPS Version **2.6.2**.
-* Download des AAPS Code unter https://github.com/MilosKozak/AndroidAPS branch 2.6.2
+* Download des AAPS Code unter https://github.com/nightscout/AndroidAPS branch 2.6.2
+
+Version 3.1.0
+================
+Erscheinungsdatum: 19.07.2022
+
+Wichtige Hinweise
+----------------------
+* Nach dem Update Wear-App deinstallieren und neue Version installieren
+* Omnipod Benutzer: Update auf pod ändern !!!
+
+Änderungen
+----------------------
+* Behobene Probleme von 3.0 Version
+* Fix gegen das Einfrieren der Anwendung @MilosKozak
+* Fix für den DASH Treiber @avereha
+* Fix für die Dana Treiber @MilosKozak
+* riesige UI Verbesserung, Bereinigung und Vereinheitlichung, Migration zu Material Design, Stile, weißes Theme, neue Symbole. @Andries-Smit @MilosKozak @osodebailar @Philoul
+* Widget @MilosKozak
+* Aidex CGM support @andyrozman @markvader (Pumpcontrol only)
+* Watch `Wear OS tiles <../Configuration/Configuration/Watchfaces.htmll#wear-os-tiles>`, translations @Andries-Smit
+* Wear code refactored. Nicht mehr abwärtskompatibel @MilosKozak
+* a11y improvements @Andries-Smit
+* neue Schutzoption PIN @Andries-Smit
+* Diagrammskala vom Menü erlauben @MilosKozak
+* Mehr Statistiken verfügbar @MilosKozak
+* MDI-Plugin entfernt zu Gunsten von VirtualPump
+* neue Automatisierungsaktion: Stop-Verarbeitung (nachfolgende Regeln)
 
 Version 3.0.0
 ================
@@ -58,7 +85,7 @@ Vorbereitende Schritte
 Änderungen
 ----------------------
 * 100-tausend Zeilen geändert, 105-tausend neue Codezeilen
-* `Omnipod DASH support <../Configuration/OmnipodDASH.md>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
+* `Omnipod DASH support <../Configuration/OmnipodDASH.html>`_ @AdrianLxM @avereha @bartsopers @vanelsberg
 * Unterstützung für `Dana-i <../Configuration/DanaRS-Insulin-Pump.html>`_ @MilosKozak
 * `DiaconnG8 support <../Configuration/DiaconnG8.html>`_
 * Glunovo Unterstützung
@@ -170,7 +197,7 @@ Erscheinungsdatum: 24.09.2020
 
 **Prüfe nach dem Update auf jeden Fall Deine Einstellungen und passe sie ggf. an wie** `hier <../Installing-AndroidAPS/update2_7.html>`__ **beschrieben.**
 
-Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
+Du musst `Objective 11 <../Usage/Objectives.html#ziel-11-automatisierung>`_ zumindest gestartet haben, um die `Automation <../Usage/Automation.html>`_ weiter nutzen zu können. Alle vorangegangenen Objectives müssen abgeschlossen sein, sonst kann Objective 11 nicht gestartet werden. Wenn Du z.B. bisher den Test in `Objective 3 <../Usage/Objectives.html#ziel-3-belege-dein-wissen>`_ noch nicht beendet hast, musst Du diesen erst abschließen, bevor Du `Objective 11 <../Usage/Objectives.html#ziel-10-automatisierung> starten kannst`_. Andere, von Dir bereits abgeschlossene Objectives werden dadurch nicht verändert. Du behälst alle Objectives, die Du bereits abgeschlossen hast!
 
 Wichtige neue Funktionen
 ----------------------

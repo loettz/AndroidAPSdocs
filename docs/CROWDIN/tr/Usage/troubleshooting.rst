@@ -19,10 +19,10 @@ Ayarlar
   .. image:: ../images/Screen_DifferentPump.png
     :alt: Hata: Bazal saatlere göre ayarlanamadı
 
-* `Pump - data from different pump <../Installing-AndroidAPS/update3_0.html#failure-message-data-from-different-pump>`_
+* `Pompa verileri farklı pompadan geliyor <../Installing-AndroidAPS/update3_0.html#failure-message-data-from- Different-pump>`_
 
   .. image:: ../images/BasalNotAlignedToHours2.png
-    :alt: Failure message: Data from different pump
+    :alt: Hata mesajı: Farklı pompadan gelen veriler
 
 
 * `Nightscout Client <../Usage/Troubleshooting-NSClient.html>`_
@@ -40,6 +40,7 @@ CGM
 ==================================================
 * `Genel <../Hardware/GeneralCGMRecommendation.html#troubleshooting>`_
 * `Dexcom G6 <../Hardware/DexcomG6.html#troubleshooting-g6>`_
+* `Libre 3 <../Hardware/Libre3.html#experiences-and-troubleshooting>`_
 * `Libre 2 <../Hardware/Libre2.html#experiences-and-troubleshooting>`_
 * `xDrip - CGM verisi yok <../Configuration/xdrip.html#identify-receiver>`_
 * `xDrip - Dexcom sorun giderme <../Configuration/xdrip.html#troubleshooting-dexcom-g5-g6-and-xdrip>`_
@@ -59,4 +60,5 @@ Telefonlar
 
 Akıllı saatler
 ==================================================
+* `Wear uygulaması sorun giderme<../Configuration/Watchfaces.html#troubleshooting-the-wear-app>`_
 * `Sony Smartwatch 3 <../Usage/SonySW3.html>`_

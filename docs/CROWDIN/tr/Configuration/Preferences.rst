@@ -1,11 +1,11 @@
 Tercihler
 ***********************************************************
-* **Open preferences** by clicking the three-dot menu on the top right side of the home screen.
+Ana ekranın sağ üst tarafındaki üç noktalı menüyü tıklayarak * **tercihleri açın**.
 
   .. image:: ../images/Pref2020_Open2.png
     :alt: Tercihleri açın
 
-* Belirli bir sekme için doğrudan tercihlere geçebilirsiniz (ör. pump tab) by opening this tab and clicking Plugin preferences.
+* Belirli bir sekme için doğrudan tercihlere geçebilirsiniz (ör. pompa sekmesi) bu sekmeyi açıp Eklenti tercihlerini tıklayarak.
 
   .. image:: ../images/Pref2020_OpenPlugin2.png
     :alt: Tercihler Eklentisini açın
@@ -34,8 +34,8 @@ Genel
 **Dil**
 
 * Telefonun varsayılan dilini kullanmak için yeni seçenek (önerilir). 
-* In case you want AAPS in a different language than your standard phone language you can choose from a broad variety.
-* Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. This is due to an android issue that overriding the default android language sometimes doesn't work.
+* AAPS'yi standart telefon dilinizden farklı bir dilde istiyorsanız, birçok dil arasından seçim yapabilirsiniz.
+* Sistem dlinden farklı bir dil kullanıyorsanız bazen dilin karıştığını görebilirsiniz. Bunun nedeni, varsayılan Android dilini geçersiz kılmanın bazen çalışmadığı bir Android sorunudur.
 
   .. image:: ../images/Pref2020_General.png
     :alt: Tercihler > Genel
@@ -49,9 +49,9 @@ Güvenlik
 Ana parola
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Sürüm 2.7'den itibaren şifreli oldukları için `ayarları <../Usage/ExportImportSettings.html>`_ dışa aktarabilmek için gereklidir.
-  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. This is a known issue of OnePlus on some phones.**
+  **Biyometrik koruma, OnePlus telefonlarda çalışmayabilir. Bu bazı OnePlus telefonlarında bilinen bir sorunudur.**
 
-* Open Preferences (three-dot menu on top right of home screen)
+* Tercihleri Açın (ana ekranın sağ üst köşesindeki üç noktalı menü)
 * "Genel" altındaki üçgeni tıklayın
 * "Ana-Parola" ya tıklayın
 * Parolayı girin, onaylayın ve Tamam'a tıklayın.
@@ -94,12 +94,12 @@ Görünüm
 Dikey oryantasyon
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Orijinal Görünüm**de **Düğmeler her zaman ekranın altında görüntülenir** ve değişmez.
-* **Large Display** has an increased size of all graphs compared to other skins
+* **Geniş Ekran** diğer dış görünümlere kıyasla tüm grafiklerin daha büyük bir boyutuna sahiptir
 
 Yatay oryantasyon
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 * **Orijinal Görünüm** ve **Geniş Ekran**'ı kullandığınızda ekranın alt kısmındaki düğmeleri görmek için aşağı kaydırmanız gerekir.
-* **Large Display** has an increased size of all graphs compared to other skins
+* **Geniş Ekran** diğer dış görünümlere kıyasla tüm grafiklerin daha büyük bir boyutuna sahiptir
 
   .. image:: ../images/Screenshots_Skins.png
     :alt: Ekran yönüne göre görünüm
@@ -137,7 +137,7 @@ Hızlı Asistan
   
 Varsayılan Geçici hedefler
 -----------------------------------------------------------
-* `Temp targets (TT) <../Usage/temptarget.html>`_ allow you to define change your blood glucose target for a certain time period.
+* `Geçici hedefler (GH) <../Usage/temptarget.html>`_ belirli bir süre için kan şekeri hedefinizi değiştirmeyi tanımlamanıza izin verir.
 * Varsayılan GH ayarı ile aktivite, yakında öğün vb. butonlar için hedefinizi kolayca değiştirebilirsiniz.
 * Hedefinizi, ana ekranın sağ üst köşesindeki hedefinize uzun basarak veya alttaki turuncu “Karbonhidrat” düğmesindeki kısayolları kullanarak değiştirebilirsiniz.
 
@@ -205,7 +205,7 @@ Bolus sihirbazı sonucunun bu kadarını ilet
 Bolus danışmanı
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * `Bolus sihirbazını <../Getting-Started/Screenshots.html#bolus-wizard>`__ çalıştırırsanız ve glikoz değeriniz 10 mmol'ün (180 mg/dl) üzerindeyse, bir düzeltme bolusu sunulacaktır.
-* If correction bolus is accepted **no carbs** will be recorded.
+* Düzeltme bolusu kabul edilirse **karbonhidrat yok** kaydedilecektir.
 * Yemeğe başlamak için glikoz değeri iyi seviyede olduğunda bir alarm başlatılacaktır.
 * Tekrar `Bolus sihirbazına <../Getting-Started/Screenshots.html#bolus-wizard>`__ girip yemek istediğiniz karbonhidrat miktarını girmelisiniz.
 
@@ -223,7 +223,7 @@ Hasta yaşı
 -----------------------------------------------------------
 * Güvenlik limitleri bu ayarda seçtiğiniz yaşa göre belirlenir. 
 * Bu limitlere (maksimum bolus gibi) çok sık ulaşıyorsanız, bir adım yukarı çıkmanın zamanı gelmiştir. 
-* It's a bad idea to select higher than real age because it can lead to overdosing by entering the wrong value in insulin dialog (by skipping the decimal dot, for example). 
+* Gerçek yaştan daha yüksek olanı seçmek kötü bir fikirdir çünkü insülin iletişim kutusuna yanlış değer girilerek (örneğin ondalık nokta atlanarak) aşırı doz almaya neden olabilir. 
 * Bu sabit güvenlik sınırları için gerçek rakamları bilmek istiyorsanız, `bu sayfada <../Usage/Open-APS-features.html>`_ kullandığınız algoritma özelliğine gidin.
 
 Maks izin verilen bolus [U]
@@ -244,7 +244,7 @@ Döngü
 APS modu
 -----------------------------------------------------------
 * Açık ve kapalı döngü ile düşük glikoz süspansiyonu (DGS) arasında geçiş yapar
-* **Açık döngü**, GBO önerilerinin verilerinize göre yapıldığı ve AAPS giriş ekranında bir bildirim olarak göründüğü anlamına gelir. After manual confirmation, the command to dose insulin will be transferred to pump. Yalnızca sanal pompa kullanıyorsanız, manuel olarak girmeniz gerekir.
+* **Açık döngü**, GBO önerilerinin verilerinize göre yapıldığı ve AAPS giriş ekranında bir bildirim olarak göründüğü anlamına gelir. Manuel onaydan sonra, insülin dozlama komutu pompaya aktarılacaktır. Yalnızca sanal pompa kullanıyorsanız, manuel olarak girmeniz gerekir.
 * **Kapalı döngü**, GBO önerilerinin sizden onay veya girdi almadan otomatik olarak pompanıza gönderildiği anlamına gelir.  
 * **Düşük glikoz süspansiyonu**, bitirilmiş bir görevi iptal etmeye gerek kalmadan Düşük Glikoz süspansiyonuna girme imkanı verir.
 
@@ -274,25 +274,25 @@ Maks Ü/s geçici Bazal ayarlanabilir
 * Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 4 ile çarparak maks geçici bazal için 2 Ü/s değerini elde edersiniz.
 * Ayrıca bkz. `ayrıntılı özellik açıklaması <../Usage/Open-APS-features.html#max-u-h-a-temp-basal-can-be-set-to-openaps-max-basal>`_.
 
-OpenAPS tarafından aşılmayacak, maksimum toplam IOB(Aktif İnsülin)[U]
+OpenAPS tarafından aşılmayacak, maksimum toplam AİNS(Aktif İnsülin)[U]
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 * Normal bazal profilinizin üzerine vücudunuzda birikmesine izin verilen ek bazal insülin miktarı (ünite olarak). 
-* Bu değere ulaşıldığında, AAPS, Aktif insülin (IOB) tekrar bu aralığa düşene kadar ek bazal insülin vermeyi durduracaktır. 
+* Bu değere ulaşıldığında, AAPS, Aktif insülin (AİNS) tekrar bu aralığa düşene kadar ek bazal insülin vermeyi durduracaktır. 
 * Bu değer **bolus aktif insülini** dikkate almaz, yalnızca bazal insülin için hesaplanır.
 * Bu değer, normal profildeki bazal oranınızdan bağımsız olarak hesaplanır ve izlenir. Normal bazal oranınızın üzerindeki ek bazal insülin dikkate alınır.
 
-Döngüye başladığınızda, sisteme alışırken bir süreliğine Maks Bazal IOB'yi 0'a ayarlamanız önerilir**. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
+Döngüye başladığınızda, sisteme alışırken bir süreliğine Maks Bazal AİNS'i 0'a ayarlamanız önerilir**. Bu, AAPS'in herhangi bir ek bazal insülin vermesini engeller. Bu süre zarfında AAPS, hipoglisemiyi önlemeye yardımcı olmak için bazal insülininizi sınırlandırabilir veya kapatabilir. Bu adım, aşağıdaki maddeleri anlamak ve gözlemlemek için önemlidir:
 
 * AAPS sistemine alışmak ve nasıl güvenli çalıştığını izlemek için kendinize süre ayırmak.
 * Bazal profilinizi ve İnsülin Duyarlılık Faktörünüzü (ISF) mükemmelleştirme fırsatını yakalamak.
 * AAPS'in hipoglisemiyi önlemek için bazal insülininizi nasıl sınırladığını görmek.
 
-Kendinizi rahat hissettiğinizde, Maks Bazal IOB değerini yükselterek sistemin size ek bazal insülin vermeye başlamasına izin verebilirsiniz. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
+Kendinizi rahat hissettiğinizde, Maks Bazal AİNS değerini yükselterek sistemin size ek bazal insülin vermeye başlamasına izin verebilirsiniz. Bunun için önerilen değer, profilinizdeki **en yüksek bazal oranı** alıp **3 ile çarpmaktır**. Örneğin, profilinizdeki en yüksek bazal oran 0,5 Ü/s ise, bunu 3 ile çarparak 1,5 Ü/s değerini elde edebilirsiniz.
 
 * Bu değerle ihtiyatlı başlayabilir ve zamanla yavaş yavaş artırabilirsiniz. 
 * Bunlar yalnızca yönergedir; herkesin vücudu farklıdır. Burada önerilenden daha fazlasına veya daha azına ihtiyacınız olduğunu fark edebilirsiniz, ancak her zaman ihtiyatlı başlayın ve yavaş yavaş ayarlayın.
 
-**Not: Bir güvenlik özelliği olarak, Max Basal IOB üst sınırı 7ü dir.**
+**Not: Bir güvenlik özelliği olarak, Max Basal AİNS üst sınırı 7ü dir.**
 
 Otoduyarlılık
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -308,7 +308,7 @@ Gelişmiş ayarlar (OpenAPS AMA)
 OpenAPS SMB ayarları
 -----------------------------------------------------------
 * AMA'nın aksine, `SMB <../Usage/Open-APS-features.html#super-micro-bolus-smb>`_ glikoz seviyelerini kontrol etmek için geçici bazal oranları kullanmaz, esas olarak küçük süper mikro boluslar kullanır.
-* SMB'yi kullanmak için. `Görev 10 <../Usage/Objectives.html#objective-10-eneasing-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>` 'a başlamış olmalısınız.
+* SMB'yi kullanmak için. `Görev 9 <../Usage/Objectives.html#objective-9-eneasing-additional-oref1-features-for-daytime-use-such-as-super-micro-bolus-smb>` 'a başlamış olmalısınız.
 * İlk üç ayar `yukarıda <../Configuration/Preferences.html#max-u-h-a-temp-basal-can-be-set-to>`__ açıklanmıştır.
 * Farklı etkinleştirme seçenekleriyle ilgili ayrıntılar, `OpenAPS özellik bölümünde <../Usage/Open-APS-features.html#enable-smb>`_ açıklanmıştır.
 * *SMB'lerin dakika cinsinden ne sıklıkta verileceği*, SMB'nin varsayılan olarak yalnızca 4 dakikada bir teslim edilmesi için bir kısıtlamadır. Bu değer, sistemin SMB'yi çok sık verilmesini engeller (örneğin, bir geçici hedefin ayarlanması durumunda). Sonuçları tam olarak bilmiyorsanız bu ayarı değiştirmemelisiniz. 
@@ -323,8 +323,8 @@ Karbonhidrat gerekli bildirimi
 * Bu özellik yalnızca SMB algoritması seçildiğinde kullanılabilir.
 * Referans tasarım karbonhidrat gerektirdiğini tespit ettiğinde ek karbonhidrat önerilecektir.
 * Bu durumda 5, 15 veya 30 dakika ertelenebilecek bir bildirim alacaksınız.
-* Ek olarak, gerekli karbonhidratlar ana ekranınızdaki COB bölümünde görüntülenecektir.
-* A threshold can be defined - minimum amount of carbs needed to trigger a notification. 
+* Ek olarak, gerekli karbonhidratlar ana ekranınızdaki AKRB bölümünde görüntülenecektir.
+* Bir eşik tanımlanabilir - bir bildirimi tetiklemek için gereken minimum karbonhidrat miktarı. 
 * İstenirse karbonhidrat gerekli bildirimleri Nightscout'a iletilebilir, bu durumda bir anons gösterilip yayınlanacaktır.
 
   .. image:: ../images/Pref2020_CarbsRequired.png
@@ -345,15 +345,15 @@ min_5m_carbimpact
 -----------------------------------------------------------
 * Algoritma, karbonhidratların ne zaman emildiğini belirlemek için BGI (kan şekeri etkisi) kullanır. 
 * Bu değer yalnızca CGM okumalarındaki boşluklar sırasında veya fiziksel aktivite kan şekeri artışını tükettiğinde kullanılır. Bunun dışında AAPS tarafından aktif karbonhidrat bozulur. 
-* At times when carb absorption can’t be dynamically worked out based on your blood's reactions it inserts a default decay to your carbs. Temel olarak bir ön güvenliktir.
+* Karbonhidrat emiliminin kanınızın reaksiyonlarına göre dinamik olarak çalışılamadığı zamanlarda, karbonhidratlarınıza varsayılan bir bozulma ekler. Temel olarak bir ön güvenliktir.
 * Basitçe söylemek gerekirse: Algoritma, mevcut insülin vb. dozundan etkilendiğinde KŞ'lerinizin nasıl davranması * gerektiğini* "bilir". 
 * Beklenen davranıştan pozitif bir sapma olduğunda, bazı karbonhidratlar emilir/çürür. Büyük değişiklik=çok karbonhidrat vs. 
 * min_5m_carbimpact, 5 dakika başına varsayılan karbonhidrat emilim etkisini tanımlar. Daha fazla ayrıntı için `OpenAPS dokümantasyonuna bakın <https://openaps.readthedocs.io/en/latest/docs/While%20You%20Wait%20For%20Gear/preferences-and-safety-settings.html?highlight=carbimpact#min- 5m-karbipakt>`__.
 * AMA için standart değer 5, SMB için 8'dir.
-* Ana ekrandaki COB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in ne zaman kullanıldığını gösterir.
+* Ana ekrandaki AKRB grafiği, en üste turuncu bir daire koyarak min_5m_impact'in ne zaman kullanıldığını gösterir.
 
   .. image:: ../images/Pref2020_min_5m_carbimpact.png
-    :alt: COB grafiği
+    :alt: AKRB grafiği
   
 Maksimum besin emilim süresi
 -----------------------------------------------------------

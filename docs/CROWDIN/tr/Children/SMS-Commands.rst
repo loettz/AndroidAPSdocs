@@ -58,7 +58,7 @@ Authenticator kurulumu
   * `FreeOTP Authenticator <https://freeotp.github.io/>`_
 
 * Seçtiğiniz kimlik doğrulama uygulamasını takipçi telefonunuza yükleyin ve AAPS'de gösterilen QR kodunu tarayın.
-* Kimlik doğrulama uygulamanızda gösterilen kodu ve AAPS'de az önce kurduğunuz PIN'i girerek tek kullanımlık şifreyi test edin. Example:
+* Kimlik doğrulama uygulamanızda gösterilen kodu ve AAPS'de az önce kurduğunuz PIN'i girerek tek kullanımlık şifreyi test edin. Örnek kullanım:
 
   * Zorunlu PIN'iniz 2020
   * Kimlik doğrulama uygulamasındaki TOTP kodu 457051
@@ -72,7 +72,7 @@ SMS komutlarını kullanmak
 ==================================================
 * Aşağıdaki `komutlardan <../Children/SMS-Commands.html#komutlar>`__ herhangi birini kullanarak onayladığınız telefon numaralarından AndroidAPS çalışan ana telefona bir SMS gönderebilirsiniz. 
 * AAPS ana telefonu, istenen komutun veya durumun başarısını onaylamak için yanıt verecektir. 
-* Kodu göndererek komutu onaylayın. Example:
+* Kodu göndererek komutu onaylayın. Örnek kullanım:
 
   * Zorunlu PIN'iniz 2020
   * Kimlik doğrulama uygulamasındaki TOTP kodu 457051
@@ -108,7 +108,7 @@ Döngü
 CGM (Sürekli glikoz ölçüm) verileri
 --------------------------------------------------
 * BG
-  * Yanıt: Son KŞ: 5,6 4dk önce, Delta: -0,2 mmol, IOB: 0,20U (Bolus: 0.10U Bazal: 0.10U)
+  * Yanıt: Son KŞ: 5,6 4dk önce, Delta: -0,2 mmol, AİNS: 0,20U (Bolus: 0.10U Bazal: 0.10U)
 * CAL 110
   * Yanıt: 110 kalibrasyon göndermek için Authenticator uygulamasından gelen kod ve ardından PIN ile cevaplayın
   * Doğru kod alındıktan sonra yanıt: Kalibrasyon gönderildi (**xDrip kuruluysa. Kalibrasyonların kabul edilmesi xDrip'te etkinleştirilmelidir**)
@@ -164,7 +164,7 @@ Diğer
 * NSCLIENT RESTART
   * Yanıt: NSCLIENT 1 alıcıyı yeniden başlattı
 * POMPA
-  * Yanıt: Son Bağlantı: 1dk önce Geçici: 0.00Ü/sa @11:38 5/30dk. IOB: 0.5U Rezerv: 34Ü Pil: 100
+  * Yanıt: Son Bağlantı: 1dk önce Geçici: 0.00Ü/sa @11:38 5/30dk. AİNS: 0.5U Rezerv: 34Ü Pil: 100
 * PUMP CONNECT
   * Yanıt: Pompa yeniden bağlandı
 * PUMP DISCONNECT *30*
